@@ -1,5 +1,9 @@
 import { Routes } from '@angular/router';
 import { RoutesPath } from './app.types';
+import { MainComponent } from './app/pages/main/main.component';
+import { ImproveComponent } from './app/pages/improve/improve.component';
+import { FriendsComponent } from './app/pages/friends/friends.component';
+import { EarnComponent } from './app/pages/earn/earn.component';
 
 export const routes: Routes = [
   {
@@ -10,23 +14,21 @@ export const routes: Routes = [
   {
     path: RoutesPath.main,
     title: 'Main',
-    loadComponent: () =>
-      import('./app/pages/main/main.component').then((m) => m.MainComponent),
+    component: MainComponent,
   },
   {
     path: RoutesPath.improve,
     title: 'Improve',
-    loadComponent: () =>
-      import('./app/pages/improve/improve.component').then(
-        (m) => m.ImproveComponent
-      ),
+    component: ImproveComponent,
   },
   {
     path: RoutesPath.friend,
     title: 'Friends',
-    loadComponent: () =>
-      import('./app/pages/friends/friends.component').then(
-        (m) => m.FriendsComponent
-      ),
+    component: FriendsComponent,
+  },
+  {
+    path: RoutesPath.earn,
+    title: 'Earn',
+    component: EarnComponent,
   },
 ];

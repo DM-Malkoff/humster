@@ -14,12 +14,10 @@
 }
 
 .drawer.open {
-  height: 34%;
   border-top: #11e7ee 1px solid;
 }
 
 .drawer-content {
-  padding: 20px;
   margin-top: 50px;
 }
 

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { DrawerComponent } from '../../components/drawer/drawer.component';
 
 @Component({
   selector: 'app-friends',
   standalone: true,
-  imports: [],
-  templateUrl: './friends.component.html'
+  imports: [DrawerComponent],
+  templateUrl: './friends.component.html',
 })
-export class FriendsComponent {
-
-}
+export class FriendsComponent {}

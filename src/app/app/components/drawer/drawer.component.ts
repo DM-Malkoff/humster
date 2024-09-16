@@ -9,6 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class DrawerComponent {
   @Input() isOpen = false;
+  @Input() padding: string = '20px';
+  @Input() height: number | string = '34%';
 
   close() {
     this.isOpen = false;

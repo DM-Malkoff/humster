@@ -1,5 +1,9 @@
-<div class="drawer" [class.open]="isOpen">
-  <div class="drawer-content">
+<div
+  class="drawer"
+  [class.open]="isOpen"
+  [style]="{ height: isOpen ? height : 0 }"
+>
+  <div class="drawer-content" [style]="{padding}">
     <button class="close-button" (click)="close()">
       <img src="assets/icons/close.svg" alt="close" class="h-8" />
     </button>
