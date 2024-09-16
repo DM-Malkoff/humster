@@ -17,6 +17,12 @@
   transform: translate(-50%, -50%);
 }
 
+.absolute-x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .half-filled-border-circle {
   position: relative;
   border-width: 4px;
