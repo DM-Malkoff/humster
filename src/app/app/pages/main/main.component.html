@@ -19,7 +19,7 @@
       <div class="flex flex-col w-2/4 flex-1 items-center justify-center mx-2">
         <img src="assets/kubok.png" class="h-10 w-10" />
         <div class="progress-bar-container">
-          <div class="progress-bar"></div>
+          <div class="progress-bar text-[8px] pl-1 flex items-center">1/5</div>
         </div>
       </div>
 
@@ -34,4 +34,52 @@
       </div>
     </div>
   </div>
+
+  <div class="flex justify-between mt-6 relative">
+    <div
+      class="h-[80px] w-[80px] header-block shadow-block leftSideButton flex justify-center items-center"
+    >
+      <img src="assets/car.png" alt="Car" class="h-[60px]" />
+    </div>
+    <div
+      class="h-[80px] w-[80px] header-block shadow-block rightSideButton flex justify-center items-center"
+    >
+      <img src="assets/settings.png" alt="Car" class="h-[50px]" />
+    </div>
+
+    <!-- BALANCE -->
+    <div class="absolute-center flex gap-1 items-center">
+      <img src="assets/icons/coin.svg" alt="Coin" class="h-[30px]" />
+      <span class="text-white text-shadow-letter-bold font-medium text-[22px]"
+        >120 223 354</span
+      >
+    </div>
+  </div>
+
+  <div class="absolute-center !top-[530px]">
+    <div
+      class="header-block flex h-[40px] w-[200px] mt-[20px] rounded-xl border-main-theme border shadow-block text-white z-20"
+    >
+      <div
+        class="header-block flex items-center justify-between p-4 h-full w-[150px] rounded-xl border-main-theme border text-white z-20"
+      >
+        <span class="text-[12px] font-semibold">1h 11m</span>
+
+        <div class="flex gap-1 items-center">
+          <img src="assets/icons/coin.svg" alt="Coin" class="h-[20px]" />
+          <span class="text-white font-medium text-[14px]">8,537</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<app-drawer [isOpen]="true">
+  <div class="money-block">
+    <img src="assets/money.png" alt="Money" class="money-png" />
+
+    <span class="text-white font-semibold text-[26px] text-center">4,128</span>
+  </div>
+
+  <button class="custom-btn mt-4">Claim</button>
+</app-drawer>

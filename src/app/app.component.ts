@@ -1,6 +1,11 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {
+  NavigationEnd,
+  Router,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
 import { RoutesPath } from './app.types';
 
 @Component({
@@ -10,57 +15,84 @@ import { RoutesPath } from './app.types';
   template: `
     <main class="flex flex-col main-height">
       <router-outlet></router-outlet>
-      <div class="mt-auto">
+      <div
+        class="flex justify-center h-[85px] gap-10 nav-background py-4 border-main-theme border-t text-white"
+      >
+        <div class="relative w-[40px] h-[40px]">
+          <img
+            routerLink="main"
+            [class]="imageClasses"
+            src="assets/person.png"
+          />
+        </div>
         <div
-          class="flex justify-center gap-10 bg-[#26272C] py-4 border-main-theme border-t text-white"
+          *ngFor="let item of bottomNavItems"
+          class="flex flex-col items-center"
+          [routerLink]="item.to"
         >
-          <div class="relative w-[40px] h-[40px]">
-            <img
-              class="absolute-center h-34 !top-0 shadow-image"
-              src="assets/person.png"
-            />
-          </div>
-          <div
-            *ngFor="let item of bottomNavItems"
-            key="{item.label}"
-            class="flex flex-col items-center"
-            [routerLink]="item.to"
-          >
-            <img [src]="item.src" class="h-8 mb-1" />
-            <span class="text-xs">{{ item.label }}</span>
-          </div>
+          <img
+            [src]="isActive(item.to) ? item.activeSrc : item.src"
+            class="h-8 mb-1"
+          />
+          <span class="text-xs text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
     </main>
   `,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'hamster';
 
+  currentUrl = '';
+
+  get imageClasses() {
+    return this.currentUrl.includes('main')
+      ? 'absolute-center h-34 !top-0 shadow-image'
+      : 'absolute-center h-34 !top-0 ';
+  }
+
+  constructor(private router: Router) {}
+
+  isActive(path: string) {
+    return this.currentUrl.includes(path);
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        console.log(event.urlAfterRedirects);
+        this.currentUrl = event.urlAfterRedirects;
+      }
+    });
+  }
   bottomNavItems = [
     {
       icon: 'fa-solid fa-wand-magic-sparkles',
       src: 'assets/icons/improve.svg',
+      activeSrc: 'assets/icons/improve-active.svg',
       label: 'Improve',
-      to: RoutesPath.main,
+      to: RoutesPath.improve,
     },
     {
       icon: 'fa-solid fa-user-group',
       src: 'assets/icons/people.svg',
+      activeSrc: 'assets/icons/people-active.svg',
       label: 'Friends',
-      to: RoutesPath.main,
+      to: RoutesPath.friend,
     },
     {
       icon: 'fa-solid fa-sack-dollar',
       src: 'assets/icons/earn.svg',
+      activeSrc: 'assets/icons/earn-active.svg',
       label: 'Earn',
-      to: RoutesPath.main,
+      to: RoutesPath.earn,
     },
     {
       icon: 'fa-solid fa-share-from-square',
       src: 'assets/icons/airdrop.svg',
+      activeSrc: 'assets/icons/airdrop-active.svg',
       label: 'AirDrop',
-      to: RoutesPath.main,
+      to: RoutesPath.air_drop,
     },
   ];
 }

@@ -6,6 +6,10 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.text-shadow-letter-bold {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
 .absolute-center {
   position: absolute;
   top: 50%;
@@ -30,9 +34,35 @@
 }
 
 .main-height {
-  height: 100dvh;
+  display: flex;
+  height: 100%;
+  min-height: 100dvh;
 }
 
 .vertical-divider {
   border-left: 1px solid #ffffff80;
+}
+
+.nav-background {
+  background: rgba(38, 39, 44, 0.9);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.page-size {
+  min-height: 100dvh;
+  padding-bottom: 85px;
+}
+
+.custom-btn {
+  background: linear-gradient(0deg, #3f4248 0%, #11e7ee 100%);
+  border: 1px solid rgba(17, 231, 238, 1);
+  color: white;
+  width: 100%;
+  padding: 14px 10px;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 600;
 }

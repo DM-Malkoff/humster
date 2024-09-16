@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CircleProgressComponent } from '../../components/circle-progress/circle-progress.component';
 import { CardComponent } from '../../components/card/card.component';
 

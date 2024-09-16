@@ -1,0 +1,8 @@
+<div class="drawer" [class.open]="isOpen">
+  <div class="drawer-content">
+    <button class="close-button" (click)="close()">
+      <img src="assets/icons/close.svg" alt="close" class="h-8" />
+    </button>
+    <ng-content></ng-content>
+  </div>
+</div>

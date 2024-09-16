@@ -1,16 +1,18 @@
 import { Component, Input } from '@angular/core';
 import { CircleProgressComponent } from '../circle-progress/circle-progress.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CircleProgressComponent],
+  imports: [CircleProgressComponent, NgIf],
   template: `
     <div
       class="bg-[#3F4248] rounded-xl mb-4 flex items-center p-2 relative h-[80px] border-main-theme border"
     >
       <!--  -->
       <div
+        *ngIf="mode === 'base'"
         class="flex flex-col items-center justify-between h-full absolute-center p-2"
       >
         <span> Income </span>
@@ -32,7 +34,20 @@ import { CircleProgressComponent } from '../circle-progress/circle-progress.comp
           <span>{{ item.income }}</span>
         </div>
       </div>
-      <div class="flex flex-row items-center ml-4 gap-3">
+
+      <div
+        *ngIf="mode === 'additional'"
+        class="flex flex-row items-center ml-4 gap-1 mr-2"
+      >
+        <img src="assets/icons/coin.svg" alt="Coin" class="w-6 h-6" />
+
+        <span>{{ item.balance }}</span>
+      </div>
+
+      <div
+        *ngIf="mode === 'base'"
+        class="flex flex-row items-center ml-4 gap-3"
+      >
         <span class="flex items-center">
           <img src="assets/icons/coin.svg" alt="Star" class="w-6 h-6" />
           {{ item.balance }}
@@ -43,6 +58,7 @@ import { CircleProgressComponent } from '../circle-progress/circle-progress.comp
   `,
 })
 export class CardComponent {
+  @Input() mode: 'base' | 'additional' = 'base';
   @Input({ required: true }) item!: {
     title: string;
     image: string;

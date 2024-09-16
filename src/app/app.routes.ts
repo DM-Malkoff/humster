@@ -21,4 +21,12 @@ export const routes: Routes = [
         (m) => m.ImproveComponent
       ),
   },
+  {
+    path: RoutesPath.friend,
+    title: 'Friends',
+    loadComponent: () =>
+      import('./app/pages/friends/friends.component').then(
+        (m) => m.FriendsComponent
+      ),
+  },
 ];
