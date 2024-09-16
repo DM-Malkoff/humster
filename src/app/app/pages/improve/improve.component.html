@@ -1,0 +1,19 @@
+<section class="font-sans bg-[#1e1e1e] text-white min-h-screen flex flex-col">
+  <div class="p-4">
+    <div class="flex bg-[#3F4248] mb-4 rounded-[12px] border-main-theme border">
+      <button
+        *ngFor="let tab of tabs"
+        [class]="getActiveTabClass(tab)"
+        (click)="activeTab = tab"
+      >
+        {{ tab }}
+      </button>
+    </div>
+
+    <h2 class="text-xl mb-4">Body</h2>
+    <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
+
+    <h2 class="text-xl mb-4 mt-6">Skills</h2>
+    <app-card *ngFor="let item of skillItems" [item]="item"></app-card>
+  </div>
+</section>

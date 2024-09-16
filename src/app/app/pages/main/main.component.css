@@ -1,0 +1,38 @@
+.background-image {
+  background-image: url(../../../../assets/city.png); /* Путь к изображению */
+  background-size: cover; /* Масштабирует изображение, чтобы покрыть весь контейнер */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  width: 100vw; /* Ширина 100% от окна просмотра */
+  height: 100vh; /* Высота 100% от окна просмотра */
+  position: fixed; /* Фиксирует изображение на фоне */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Помещает изображение на задний план */
+}
+
+.header-block {
+  background: rgba(38, 39, 44, 0.7);
+}
+
+.progress-bar-container {
+  width: 100%; /* Ширина контейнера прогресс-бара */
+  background-color: rgba(38, 39, 44, 0.4); /* Цвет фона контейнера */
+  border-radius: 25px; /* Закругленные углы контейнера */
+  overflow: hidden; /* Обрезка содержимого, выходящего за границы контейнера */
+  height: 14px; /* Высота контейнера */
+  /* margin: 20px 0; Отступы сверху и снизу */
+}
+
+.progress-bar {
+  width: 50%; /* Ширина прогресс-бара (можете изменить на нужное значение) */
+  height: 100%; /* Высота прогресс-бара */
+  background: linear-gradient(
+    90deg,
+    #26272c 0%,
+    #8a5cc2 29.5%,
+    #3c9aaa 62%,
+    #11e0e8 100%
+  );
+  border-radius: 25px 0 0 25px; /* Закругленные углы слева */
+}
