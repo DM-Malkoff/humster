@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { DrawerComponent } from '../../components/drawer/drawer.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [DrawerComponent],
+  imports: [DrawerComponent, RouterModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
