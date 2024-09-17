@@ -7,4 +7,6 @@ import { DrawerComponent } from '../../components/drawer/drawer.component';
   imports: [DrawerComponent],
   templateUrl: './friends.component.html',
 })
-export class FriendsComponent {}
+export class FriendsComponent {
+  drawerOpen = false;
+}

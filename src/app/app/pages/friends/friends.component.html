@@ -1,6 +1,6 @@
 <section class="page-size bg-[#26272C] text-white">
-  <div class="flex justify-center ml-4 mr-2 relative">
-    <img (click)="drawer.isOpen = true" src="assets/bonus.png" alt="Bonus" />
+  <div class="flex justify-center ml-4 mr-2 relative ignore-click-outside">
+    <img (click)="drawerOpen = true" src="assets/bonus.png" alt="Bonus" />
     <img
       src="assets/icons/info.svg"
       alt="Info"
@@ -76,7 +76,13 @@
   </div>
 </section>
 
-<app-drawer #drawer height="60%" padding="10px">
+<app-drawer
+  [isOpen]="drawerOpen"
+  (onClose)="drawerOpen = false"
+  height="450px"
+  padding="10px"
+  ignoreClickOutsideClass="ignore-click-outside"
+>
   <div class="flex flex-col">
     <span class="text-white font-semibold text-[30px] text-center"
       >Bonus for Leveling Up</span
