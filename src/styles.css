@@ -42,7 +42,7 @@
 .main-height {
   display: flex;
   height: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 
 .vertical-divider {
@@ -58,7 +58,7 @@
 }
 
 .page-size {
-  min-height: 100dvh;
+  min-height: 100vh;
   padding-bottom: 85px;
 }
 
