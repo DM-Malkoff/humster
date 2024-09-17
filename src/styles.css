@@ -88,3 +88,24 @@
 .share-bg {
   background: linear-gradient(360deg, #26272c 0%, #3f4248 100%) !important;
 }
+
+.blinking-dot {
+  position: absolute;
+  top: 0;
+  right: -14px; /* Adjust as needed */
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

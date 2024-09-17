@@ -72,8 +72,9 @@
         </button>
         <button
           (click)="activeTab = 'partners'"
-          [class]="isTabClass('partners')"
+          [class]="isTabClass('partners') + ' relative'"
         >
+          <div class="blinking-dot"></div>
           Partners
         </button>
       </div>
