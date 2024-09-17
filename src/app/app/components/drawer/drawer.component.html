@@ -1,12 +1,17 @@
 <div
-  class="drawer"
-  [class.open]="isOpen"
+  [class]="drawerClass"
+  [ngClass]="{ open: isOpen }"
   [style]="{ height: isOpen ? height : 0 }"
+  (clickOutside)="clickOutside()"
+  appClickOutside
+  [ignoreClickOutsideClass]="ignoreClickOutsideClass"
 >
   <div class="drawer-content" [style]="{padding}">
+    @if (!hideIcon) {
     <button class="close-button" (click)="close()">
       <img src="assets/icons/close.svg" alt="close" class="h-8" />
     </button>
+    }
     <ng-content></ng-content>
   </div>
 </div>

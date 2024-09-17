@@ -79,3 +79,12 @@
   background-color: #3f4248f4;
   border-radius: 16px;
 }
+
+.circle-grad {
+  background: linear-gradient(180deg, #26272c 0%, #11e7ee 50%, #26272c 100%);
+  border: 4px solid #9fadc9;
+}
+
+.share-bg {
+  background: linear-gradient(360deg, #26272c 0%, #3f4248 100%) !important;
+}

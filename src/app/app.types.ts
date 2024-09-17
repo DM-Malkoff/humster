@@ -4,4 +4,5 @@ export enum RoutesPath {
   earn = 'earn',
   friend = 'friends',
   air_drop = 'air-drop',
+  lead = 'lead',
 }

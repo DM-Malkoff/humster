@@ -1,3 +1,48 @@
+<app-drawer
+  height="580px"
+  [isOpen]="drawerOpen"
+  (onClose)="closeDrawer()"
+  [hideIcon]="true"
+  padding="0px 10px"
+  className="share-bg"
+  ignoreClickOutsideClass="ignore-drawer-click"
+>
+  <div class="flex flex-col items-center text-white">
+    <div
+      class="w-[140px] h-[140px] bg-red-50 rounded-full circle-grad flex justify-center items-center"
+    >
+      @if (drawerIconSrc) {
+      <img [src]="drawerIconSrc" alt="Network icon" />
+      }
+    </div>
+
+    @if (selectedShare === 'tg') {
+    <p class="text-[26px] font-semibold mt-4">Join our TG channel</p>
+    } @else if (selectedShare === 'inst') {
+    <p class="text-[26px] font-semibold mt-4">Follow our account</p>
+    } @else if (selectedShare === 'youtube') {
+    <p class="text-[26px] font-semibold mt-4 text-center max-w-[200px]">
+      Subscribe our Yotube channel
+    </p>
+    }
+
+    <button class="custom-btn !border-none max-w-[300px] mt-8">JOIN</button>
+
+    @if (selectedShare !== 'youtube') {
+    <p class="max-w-[360px] text-center mt-6">
+      Follow us on the account. You’ll get all the most interesting news
+    </p>
+    } @else {
+    <p class="max-w-[360px] text-center mt-6">
+      Subscribe to our channel and follow the new releases
+    </p>
+    }
+    <button class="custom-btn !border-none max-w-[300px] mt-8">
+      Check action
+    </button>
+  </div>
+</app-drawer>
+
 <section class="page-size bg-[#26272C] text-white pt-8">
   <div
     class="bg-[#ECB829] flex rounded-[8px] gap-4 px-4 py-2 items-center mx-4"
@@ -22,13 +67,22 @@
   <div class="flex justify-center mt-6">
     <div class="flex flex-col w-[300px]">
       <div class="flex justify-around">
-        <button class="font-semibold">Gaming</button>
-        <button class="text-[#5C5E64] font-semibold">Partners</button>
+        <button (click)="activeTab = 'gaming'" [class]="isTabClass('gaming')">
+          Gaming
+        </button>
+        <button
+          (click)="activeTab = 'partners'"
+          [class]="isTabClass('partners')"
+        >
+          Partners
+        </button>
       </div>
 
       <div class="mt-2 w-full h-[1px] bg-[#FFFFFF80] opacity-[0.5]"></div>
     </div>
   </div>
+
+  @if (activeTab === 'gaming') {
 
   <p class="mt-4 ml-4 mb-4">Daily</p>
 
@@ -79,6 +133,78 @@
   <p class="mt-6 ml-4 mb-4">Quests</p>
 
   <div class="flex flex-col mx-4 gap-2 mb-20">
+    <div
+      class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center ignore-drawer-click"
+      (click)="openDrawer('tg')"
+    >
+      <img src="assets/icons/tg.svg" alt="Flash card icon" class="h-10" />
+
+      <div class="flex flex-col flex-1">
+        <span class="font-medium text-[16px]">Join our TG channel</span>
+
+        <div class="flex gap-1 items-center">
+          <img src="assets/icons/coin.svg" alt="Coin icon" class="h-6" />
+          <span>50</span>
+        </div>
+      </div>
+
+      <img
+        src="assets/icons/arrow-right.svg"
+        alt="Arrow right icon"
+        class="h-6"
+      />
+    </div>
+
+    <div
+      class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center ignore-drawer-click"
+      (click)="openDrawer('inst')"
+    >
+      <img src="assets/icons/inst.svg" alt="Flash card icon" class="h-10" />
+
+      <div class="flex flex-col flex-1">
+        <span class="font-medium text-[16px]">Follow our account</span>
+
+        <div class="flex gap-1 items-center">
+          <img src="assets/icons/coin.svg" alt="Coin icon" class="h-6" />
+          <span>50</span>
+        </div>
+      </div>
+
+      <img
+        src="assets/icons/arrow-right.svg"
+        alt="Arrow right icon"
+        class="h-6"
+      />
+    </div>
+
+    <div
+      class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center ignore-drawer-click"
+      (click)="openDrawer('youtube')"
+    >
+      <img src="assets/icons/youtube.svg" alt="Flash card icon" class="h-10" />
+
+      <div class="flex flex-col flex-1">
+        <span class="font-medium text-[16px]"
+          >Subscribe our Youtube channel</span
+        >
+
+        <div class="flex gap-1 items-center">
+          <img src="assets/icons/coin.svg" alt="Coin icon" class="h-6" />
+          <span>50</span>
+        </div>
+      </div>
+
+      <img
+        src="assets/icons/arrow-right.svg"
+        alt="Arrow right icon"
+        class="h-6"
+      />
+    </div>
+  </div>
+  } @if (activeTab === 'partners') {
+  <p class="mt-4 ml-4 mb-4">Mini apps</p>
+
+  <div class="flex flex-col mx-4 gap-2">
     <div class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center">
       <img src="assets/icons/tg.svg" alt="Flash card icon" class="h-10" />
 
@@ -99,10 +225,33 @@
     </div>
 
     <div class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center">
-      <img src="assets/icons/inst.svg" alt="Flash card icon" class="h-10" />
+      <img src="assets/icons/tg.svg" alt="Flash card icon" class="h-10" />
 
       <div class="flex flex-col flex-1">
-        <span class="font-medium text-[16px]">Follow our account</span>
+        <span class="font-medium text-[16px]">Join our TG channel</span>
+
+        <div class="flex gap-1 items-center">
+          <img src="assets/icons/coin.svg" alt="Coin icon" class="h-6" />
+          <span>50</span>
+        </div>
+      </div>
+
+      <img
+        src="assets/icons/arrow-right.svg"
+        alt="Arrow right icon"
+        class="h-6"
+      />
+    </div>
+  </div>
+
+  <p class="ml-4 mb-4 mt-6">Channel</p>
+
+  <div class="flex flex-col mx-4 gap-2 mb-20">
+    <div class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center">
+      <img src="assets/icons/tg.svg" alt="Flash card icon" class="h-10" />
+
+      <div class="flex flex-col flex-1">
+        <span class="font-medium text-[16px]">Join our TG channel</span>
 
         <div class="flex gap-1 items-center">
           <img src="assets/icons/coin.svg" alt="Coin icon" class="h-6" />
@@ -118,12 +267,10 @@
     </div>
 
     <div class="flex border-b border-[#FFFFFF80] p-2 gap-4 items-center">
-      <img src="assets/icons/youtube.svg" alt="Flash card icon" class="h-10" />
+      <img src="assets/icons/tg.svg" alt="Flash card icon" class="h-10" />
 
       <div class="flex flex-col flex-1">
-        <span class="font-medium text-[16px]"
-          >Subscribe our Yotube channel</span
-        >
+        <span class="font-medium text-[16px]">Join our TG channel</span>
 
         <div class="flex gap-1 items-center">
           <img src="assets/icons/coin.svg" alt="Coin icon" class="h-6" />
@@ -138,4 +285,5 @@
       />
     </div>
   </div>
+  }
 </section>

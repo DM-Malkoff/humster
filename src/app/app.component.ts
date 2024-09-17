@@ -15,6 +15,8 @@ import { RoutesPath } from './app.types';
   template: `
     <main class="flex flex-col main-height">
       <router-outlet></router-outlet>
+
+      @if (currentUrl !== '/lead') {
       <div
         class="flex justify-center h-[85px] gap-10 nav-background py-4 border-main-theme border-t text-white"
       >
@@ -37,6 +39,7 @@ import { RoutesPath } from './app.types';
           <span class="text-xs text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
+      }
     </main>
   `,
 })
