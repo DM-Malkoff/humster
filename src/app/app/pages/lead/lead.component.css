@@ -48,7 +48,7 @@ h3 {
 .box {
   position: absolute;
   z-index: 1;
-  height: 150px;
+  height: 80px;
 }
 
 .flexColumn {
