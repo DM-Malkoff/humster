@@ -1,13 +1,15 @@
 <div class="nav-background-color page-size">
   <section class="font-sans text-white flex flex-col">
     <div class="p-4">
-      <div
-        class="flex bg-[#3F4248] mb-4 rounded-[12px] border-main-theme border"
-      >
+      <div class="tab-container">
+        <div
+          class="tab-background"
+          [ngStyle]="{ left: getBackgroundPosition() }"
+        ></div>
         <button
-          *ngFor="let tab of tabs"
+          *ngFor="let tab of tabs; let i = index"
           [class]="getActiveTabClass(tab)"
-          (click)="activeTab = tab"
+          (click)="activeTab = tab; activeIndex = i"
         >
           {{ tab }}
         </button>

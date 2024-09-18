@@ -1,0 +1,38 @@
+.tab-container {
+  position: relative;
+  display: flex;
+  background-color: #3f4248;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #11e7ee;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: white;
+  transition: color 0.3s;
+  z-index: 1;
+}
+
+.tab-button.active {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.tab-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(100% / 3); /* Assuming there are 3 tabs */
+  background: linear-gradient(180deg, #11e7ee 0%, #3f4248 100%);
+  border-radius: 12px;
+  transition: left 0.3s;
+  z-index: 0;
+  transform: scale(1.05);
+}
+
+.linearGradient {
+  background: linear-gradient(180deg, #11e7ee 0%, #3f4248 100%);
+}

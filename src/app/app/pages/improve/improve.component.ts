@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { CircleProgressComponent } from '../../components/circle-progress/circle-progress.component';
 import { CardComponent } from '../../components/card/card.component';
@@ -6,16 +6,13 @@ import { CardComponent } from '../../components/card/card.component';
 @Component({
   selector: 'app-improve',
   standalone: true,
-  imports: [NgFor, CircleProgressComponent, CardComponent],
+  imports: [NgFor, CircleProgressComponent, CardComponent, NgStyle],
   templateUrl: './improve.component.html',
-  styles: `
-    .linearGradient {
-      background: linear-gradient(180deg, #11E7EE 0%, #3F4248 100%);
-    }
-  `,
+  styleUrl: './improve.component.css',
 })
 export class ImproveComponent {
   activeTab = 'Personal';
+  activeIndex: number = 0;
   bodyItems = [
     { title: 'Food', image: '/food.jpg', cost: 15, income: 320, balance: 45 },
     { title: 'Sport', image: '/sport.jpg', cost: 25, income: 320, balance: 80 },
@@ -48,8 +45,10 @@ export class ImproveComponent {
   tabs = ['Personal', 'Work', 'Realty'];
 
   getActiveTabClass(tab: string) {
-    return this.activeTab === tab
-      ? 'flex-1 py-2 px-4 rounded-[12px] text-white linearGradient scale-[1.05] transition-all text-shadow-letter'
-      : 'flex-1 py-2 px-4 rounded-[12px] text-white transition-all';
+    return this.activeTab === tab ? 'tab-button active' : 'tab-button';
+  }
+
+  getBackgroundPosition() {
+    return `calc(${this.activeIndex} * 100% / ${this.tabs.length})`;
   }
 }

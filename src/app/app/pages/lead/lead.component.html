@@ -1,9 +1,8 @@
 <div class="card page-size">
   <div class="head">
-    <div class="box homeless"></div>
+    <div [class]="getBackground()"></div>
     <div class="flexColumn">
-      <img src="assets/images/header/man.png" alt="Man" />
-      <h2>Homeless</h2>
+      <app-slider (onChangeSlide)="activeSlide = $event"></app-slider>
     </div>
   </div>
   <div class="body">

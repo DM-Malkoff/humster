@@ -41,7 +41,7 @@ h3 {
   box-shadow: 0px 8px 180px 100px #3789e6;
 }
 
-.head img {
+.head .man {
   height: 150px;
 }
 
@@ -49,9 +49,11 @@ h3 {
   position: absolute;
   z-index: 1;
   height: 80px;
+  transition: all 0.3s ease;
 }
 
 .flexColumn {
+  width: 100%;
   position: absolute;
   z-index: 2;
   display: flex;
@@ -205,4 +207,37 @@ h3 {
 .flexBetween h3 {
   font-size: 18px;
   font-weight: 600;
+}
+
+/* swiper */
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Центрируем изображение */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

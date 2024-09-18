@@ -1,0 +1,68 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center; /* Центрируем текст под изображением */
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.slide-text {
+  margin-top: 10px;
+  font-size: 24px; /* Увеличенный размер текста */
+  font-weight: 600; /* Полужирный текст */
+  color: #fff; /* Цвет текста */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10; /* Устанавливаем z-index, чтобы кнопки были поверх слайдов */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Медиазапросы для экранов шириной менее 500 пикселей */
+@media (max-width: 500px) {
+  .slide-text {
+    font-size: 24px; /* Уменьшаем размер текста */
+  }
+
+  button {
+    padding: 5px; /* Уменьшаем размер кнопок */
+    top: 45%; /* Корректируем позиционирование кнопок */
+  }
+
+  .prev {
+    left: 110px;
+  }
+
+  .next {
+    right: 110px;
+  }
+}
