@@ -14,7 +14,9 @@ import { RoutesPath } from './app.types';
   imports: [RouterOutlet, NgFor, RouterModule],
   template: `
     <main class="flex flex-col main-height">
-      <router-outlet></router-outlet>
+      <div class="scroll">
+        <router-outlet></router-outlet>
+      </div>
 
       @if (currentUrl !== '/lead') {
       <div

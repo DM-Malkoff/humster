@@ -72,7 +72,9 @@ body,
 
 .page-size {
   min-height: 100dvh;
+  max-height: 100dvh;
   padding-bottom: 85px;
+  overflow: scroll;
 }
 
 .custom-btn {
