@@ -8,7 +8,7 @@ import { NgIf } from '@angular/common';
   imports: [CircleProgressComponent, NgIf],
   template: `
     <div
-      class="bg-[#3F4248] rounded-xl mb-4 flex items-center p-2 relative h-[80px] border-main-theme border"
+      class="bg-[#3F4248] rounded-xl flex items-center p-2 relative h-[80px] border-main-theme border"
     >
       <!--  -->
       <div

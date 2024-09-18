@@ -21,6 +21,7 @@ export class DrawerComponent implements OnChanges {
   @Input() hideIcon = false;
   @Input() isOpen = false;
   @Input() padding: string = '20px';
+  @Input() margin: string = '50px 0 0 0';
   @Input() height: number | string = '34%';
   @Input() ignoreClickOutsideClass: string = '';
 

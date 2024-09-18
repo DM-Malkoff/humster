@@ -18,7 +18,7 @@ import { RoutesPath } from './app.types';
 
       @if (currentUrl !== '/lead') {
       <div
-        class="flex justify-center h-[85px] gap-10 nav-background py-4 border-main-theme border-t text-white"
+        class="flex justify-center h-[85px] gap-9 nav-background px-2 py-4 border-main-theme border-t text-white"
       >
         <div class="relative w-[40px] h-[40px]">
           <img
@@ -67,6 +67,12 @@ export class AppComponent implements OnInit {
         this.currentUrl = event.urlAfterRedirects;
       }
     });
+
+    if ('Telegram' in window) {
+      const tg = window.Telegram;
+      tg.WebApp.headerColor = '#212121';
+      tg.WebApp.expand();
+    }
   }
   bottomNavItems = [
     {

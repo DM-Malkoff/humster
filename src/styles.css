@@ -49,6 +49,10 @@
   border-left: 1px solid #ffffff80;
 }
 
+.nav-background-color {
+  background: rgba(38, 39, 44, 1);
+}
+
 .nav-background {
   background: rgba(38, 39, 44, 0.9);
   width: 100%;
