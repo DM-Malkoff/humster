@@ -16,7 +16,7 @@ import { NgClass } from '@angular/common';
   templateUrl: './drawer.component.html',
   styleUrl: './drawer.component.css',
 })
-export class DrawerComponent implements OnChanges {
+export class DrawerComponent {
   @Input() className: string = '';
   @Input() hideIcon = false;
   @Input() isOpen = false;
@@ -43,9 +43,5 @@ export class DrawerComponent implements OnChanges {
 
   clickOutside() {
     this.close();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
   }
 }
