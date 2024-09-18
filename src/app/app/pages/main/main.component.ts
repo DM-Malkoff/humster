@@ -10,9 +10,16 @@ import { RouterModule } from '@angular/router';
   styleUrl: './main.component.css',
 })
 export class MainComponent {
-  onClickViral(e: any) {
-    if (navigator.vibrate) {
-      navigator.vibrate(200);
+  onClickViral(event: any) {
+    const target = event.target;
+    const imgElement =
+      target.tagName === 'IMG' ? target : target.querySelector('img');
+
+    if (imgElement) {
+      imgElement.classList.add('shake');
+      setTimeout(() => {
+        imgElement.classList.remove('shake');
+      }, 2000); // 2 seconds
     }
   }
 }
