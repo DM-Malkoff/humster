@@ -20,13 +20,14 @@ import { RoutesPath } from './app.types';
 
       @if (currentUrl !== '/lead') {
       <div
-        class="flex justify-center h-[85px] gap-9 nav-background px-2 py-4 border-main-theme border-t text-white"
+        class="flex justify-center h-[80px] gap-9 nav-background px-2 py-4 border-main-theme border-t text-white"
       >
         <div class="relative w-[40px] h-[40px]">
           <img
             routerLink="main"
             [class]="imageClasses"
             src="assets/person.png"
+            class="h-[80px]"
           />
         </div>
         <div
@@ -36,9 +37,9 @@ import { RoutesPath } from './app.types';
         >
           <img
             [src]="isActive(item.to) ? item.activeSrc : item.src"
-            class="h-8 mb-1"
+            class="h-7 mb-1"
           />
-          <span class="text-xs text-[#7A7C82]">{{ item.label }}</span>
+          <span class="text-[10px] text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
       }
