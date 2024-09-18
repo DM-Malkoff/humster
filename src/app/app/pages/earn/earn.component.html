@@ -1,5 +1,5 @@
 <app-drawer
-  height="520px"
+  [height]="selectedShare === 'youtube' ? '570px' : '520px'"
   [isOpen]="drawerOpen"
   (onClose)="closeDrawer()"
   [hideIcon]="true"
