@@ -9,7 +9,7 @@ import { DrawerComponent } from '../../components/drawer/drawer.component';
   styleUrl: './earn.component.css',
 })
 export class EarnComponent {
-  selectedShare: null | 'tg' | 'inst' | 'youtube' = null;
+  selectedShare: null | 'dailyReward' | 'tg' | 'inst' | 'youtube' = null;
   activeTab: 'gaming' | 'partners' = 'gaming';
 
   drawerOpen = false;
@@ -21,7 +21,7 @@ export class EarnComponent {
     return '';
   }
 
-  openDrawer(share: 'tg' | 'inst' | 'youtube') {
+  openDrawer(share: 'dailyReward' | 'tg' | 'inst' | 'youtube') {
     this.drawerOpen = true;
     this.selectedShare = share;
   }
@@ -35,5 +35,15 @@ export class EarnComponent {
     return tab === this.activeTab
       ? 'font-semibold'
       : 'text-[#5C5E64] font-semibold';
+  }
+
+  getHeight() {
+    if (this.selectedShare === 'youtube') {
+      return '570px';
+    } else if (this.selectedShare === 'dailyReward') {
+      return '650px';
+    } else {
+      return '500px';
+    }
   }
 }

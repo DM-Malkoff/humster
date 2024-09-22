@@ -1,5 +1,5 @@
 <app-drawer
-  [height]="selectedShare === 'youtube' ? '570px' : '530px'"
+  [height]="getHeight()"
   [isOpen]="drawerOpen"
   (onClose)="closeDrawer()"
   [hideIcon]="true"
@@ -7,45 +7,228 @@
   className="share-bg"
   ignoreClickOutsideClass="ignore-drawer-click"
 >
-  <div class="flex flex-col items-center text-white">
-    <div
-      class="w-[140px] h-[140px] bg-red-50 rounded-full circle-grad flex justify-center items-center"
-    >
-      @if (drawerIconSrc) {
-      <img [src]="drawerIconSrc" alt="Network icon" />
+  @if (selectedShare !== 'dailyReward'){
+    <div class="flex flex-col items-center text-white">
+      <div
+        class="w-[140px] h-[140px] bg-red-50 rounded-full circle-grad flex justify-center items-center"
+        (click)="openDrawer('tg')"
+      >
+        @if (drawerIconSrc) {
+        <img [src]="drawerIconSrc" alt="Network icon" />
+        }
+      </div>
+
+      @if (selectedShare === 'tg') {
+      <p class="text-[26px] font-semibold mt-4">Join our TG channel</p>
+      } @else if (selectedShare === 'inst') {
+      <p class="text-[26px] font-semibold mt-4">Follow our account</p>
+      } @else if (selectedShare === 'youtube') {
+      <p class="text-[26px] font-semibold mt-4 text-center max-w-[200px]">
+        Subscribe our Yotube channel
+      </p>
       }
+
+      <button class="custom-btn !border-none max-w-[300px] mt-8">JOIN</button>
+
+      @if (selectedShare !== 'youtube') {
+      <p class="max-w-[360px] text-center mt-6">
+        Follow us on the account. You’ll get all the most interesting news
+      </p>
+      } @else {
+      <p class="max-w-[360px] text-center mt-6">
+        Subscribe to our channel and follow the new releases
+      </p>
+      }
+      <button class="custom-btn !border-none max-w-[300px] mt-8">
+        Check action
+      </button>
     </div>
+  } @else {
+  <div class="flex flex-col items-center text-white">
+    <p class="text-[28px] font-semibold mt-4 mb-4">Daily reward</p>
+    <div class="days grid grid-cols-4 gap-4 w-full h-27 overflow-y-auto">
+      <div class="relative day-block col-span-1 text-center justify-center border-2 border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <div class="absolute inset-0 bg-gradient-to-t from-custom-teal to-custom-light-gray opacity-70"></div>
+        <div class="absolute inset-0 bg-[url('assets/icons/icon-check-mark.png')] bg-center bg-contain bg-[length:50%] bg-no-repeat"></div>
+        <p class="mb-2">Day 1</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 bg-gradient-to-t from-custom-teal to-custom-gray text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 2</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 3</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 4</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 5</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 6</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block-big relative bg-custom-gradient col-span-2 text-left pl-5 justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <div class="absolute inset-0 bg-[url('assets/student_b.png')] bg-center bg-contain bg-no-repeat bg-right"></div>
+        <div class="flex items-center mb-2">
+          <p class="mr-1">Day 7</p>
+          <span class="text-sm mr-1">+2</span>
+          <img src="assets/icons/icon-friends.png" class="w-[15px] h-[15px] inline-block" alt="" />
+        </div>
 
-    @if (selectedShare === 'tg') {
-    <p class="text-[26px] font-semibold mt-4">Join our TG channel</p>
-    } @else if (selectedShare === 'inst') {
-    <p class="text-[26px] font-semibold mt-4">Follow our account</p>
-    } @else if (selectedShare === 'youtube') {
-    <p class="text-[26px] font-semibold mt-4 text-center max-w-[200px]">
-      Subscribe our Yotube channel
-    </p>
-    }
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 8</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 9</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 10</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 11</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
 
-    <button class="custom-btn !border-none max-w-[300px] mt-8">JOIN</button>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 12</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 13</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block-big relative bg-custom-gradient col-span-2 text-left pl-5 justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <div class="absolute inset-0 bg-[url('assets/tshirt.png')] bg-center bg-contain bg-no-repeat bg-right"></div>
+        <div class="flex items-center mb-2">
+          <p class="mr-1">Day 14</p>
+          <span class="text-sm mr-1">+4</span>
+          <img src="assets/icons/icon-friends.png" class="w-[15px] h-[15px] inline-block" alt="" />
+        </div>
 
-    @if (selectedShare !== 'youtube') {
-    <p class="max-w-[360px] text-center mt-6">
-      Follow us on the account. You’ll get all the most interesting news
-    </p>
-    } @else {
-    <p class="max-w-[360px] text-center mt-6">
-      Subscribe to our channel and follow the new releases
-    </p>
-    }
-    <button class="custom-btn !border-none max-w-[300px] mt-8">
-      Check action
-    </button>
+        <img src="assets/icons/question_icon.png" class="w-5 inline-block mb-2" alt="" />
+      </div>
+
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 15</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 16</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 17</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 18</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 19</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 20</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block-big relative bg-custom-gradient col-span-2 text-left pl-5 justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <div class="absolute inset-0 bg-[url('assets/tshirt2.png')] bg-center bg-contain bg-no-repeat bg-right"></div>
+        <div class="flex items-center mb-2">
+          <p class="mr-1">Day 21</p>
+          <span class="text-sm mr-1">+6</span>
+          <img src="assets/icons/icon-friends.png" class="w-[15px] h-[15px] inline-block" alt="" />
+        </div>
+
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 22</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 23</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 24</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 25</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 26</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block col-span-1 text-center justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <p class="mb-2">Day 27</p>
+        <img src="assets/coin.png" class="w-5 inline-block mb-2" alt="" />
+        <p class="mb-2">900</p>
+      </div>
+      <div class="day-block-big relative bg-custom-gradient col-span-2 text-left pl-5 justify-center border border-solid border-[#11E7EE] rounded-tl-[10px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]">
+        <div class="absolute inset-0 bg-[url('assets/robot.png')] bg-center bg-contain bg-no-repeat bg-right"></div>
+        <div class="flex items-center mb-2">
+          <p class="mr-1">Day 28</p>
+          <span class="text-sm mr-1">+8</span>
+          <img src="assets/icons/icon-friends.png" class="w-[15px] h-[15px] inline-block" alt="" />
+        </div>
+
+        <img src="assets/icons/question_icon.png" class="w-5 inline-block mb-2" alt="" />
+      </div>
+
+    </div>
+    <button class="custom-btn !border-none mt-5 w-full">
+        Collect the reward
+      </button>
   </div>
+  }
 </app-drawer>
 
 <section class="page-size bg-[#26272C] text-white pt-8">
   <div
-    class="bg-[#ECB829] flex rounded-[8px] gap-4 px-4 py-2 items-center mx-4"
+    class="bg-[#ECB829] flex rounded-[8px] gap-4 px-4 py-2 items-center mx-4 ignore-drawer-click"
+    (click)="openDrawer('dailyReward')"
   >
     <img src="assets/much-money.png" alt="Much money" class="h-[60px]" />
     <div class="flex flex-col flex-1">
