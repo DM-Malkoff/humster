@@ -34,6 +34,7 @@ import { RoutesPath } from './app.types';
           *ngFor="let item of bottomNavItems"
           class="flex flex-col items-center"
           [routerLink]="item.to"
+          (click)="onItemClick($event)"
         >
           <img
             [src]="isActive(item.to) ? item.activeSrc : item.src"
@@ -45,6 +46,7 @@ import { RoutesPath } from './app.types';
       }
     </main>
   `,
+  styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   title = 'hamster';
@@ -58,6 +60,14 @@ export class AppComponent implements OnInit {
   }
 
   constructor(private router: Router) {}
+  onItemClick(event: Event): void {
+    const target = event.currentTarget as HTMLElement;
+    target.classList.add('vibrate');
+
+    setTimeout(() => {
+      target.classList.remove('vibrate');
+    }, 200);
+  }
 
   isActive(path: string) {
     return this.currentUrl.includes(path);
