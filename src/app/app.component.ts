@@ -20,7 +20,7 @@ import { RoutesPath } from './app.types';
 
       @if (currentUrl !== '/lead') {
       <div
-        class="flex justify-center h-[80px] gap-9 nav-background px-2 py-4 border-main-theme border-t text-white"
+        class="flex justify-center h-[80px] gap-12 nav-background px-2 py-4 border-main-theme border-t text-white"
       >
         <div class="relative w-[40px] h-[40px]">
           <img

@@ -8,8 +8,9 @@ import { NgIf } from '@angular/common';
   imports: [CircleProgressComponent, NgIf],
   template: `
     <div
-      class="bg-[#3F4248] rounded-xl flex items-center p-2 relative h-[80px] border-main-theme border"
+      class="relative bg-[#3F4248] rounded-xl flex items-center p-2 pl-0 relative h-[68px] border-main-theme border"
     >
+        <div *ngIf="isUnActive" class="absolute bg-black inset-0 bg-opacity-20 rounded-xl z-50"></div>
       <!--  -->
       <div
         *ngIf="mode === 'base'"
@@ -21,8 +22,13 @@ import { NgIf } from '@angular/common';
         </span>
       </div>
       <!--  -->
+<!--      <img-->
+<!--        [src]="item.image"-->
+<!--        [alt]="item.title"-->
+<!--        class="w-16 h-16 rounded-lg mr-4"-->
+<!--      />-->
       <img
-        [src]="item.image"
+        src="assets/default.png"
         [alt]="item.title"
         class="w-16 h-16 rounded-lg mr-4"
       />
@@ -66,4 +72,5 @@ export class CardComponent {
     income: number;
     balance: number;
   };
+  @Input() isUnActive: boolean = false;
 }
