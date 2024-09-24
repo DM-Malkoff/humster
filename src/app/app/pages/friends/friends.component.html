@@ -14,7 +14,7 @@
   </p>
 
   <div class="flex justify-center gap-4 mt-4">
-    <button class="flex border-toxic px-8 py-1 items-center gap-2">
+    <button class="flex border-toxic justify-center py-1 items-center gap-2 w-[240px]">
       <span>Invite a Friend</span>
       <img src="assets/icons/person.svg" alt="Person" class="h-[20px]" />
     </button>
@@ -25,14 +25,14 @@
   </div>
 
   <div class="flex flex-col gap-3 mt-6 mx-4">
-    <div class="flex border-toxic px-1 py-2 gap-[18px] items-center h-[80px]">
-      <img src="assets/gift.png" alt="Gift" class="h-[80px]" />
+    <div class="flex border-toxic px-1 py-2 gap-[18px] items-center h-[66px]">
+      <img src="assets/gift.png" alt="Gift" class="h-[50px]" />
 
-      <div class="flex flex-col justify-between gap-3">
-        <span class="font-semibold text-[20px] ml-2">Invite a Friend</span>
+      <div class="flex flex-col justify-between gap-3 text-[13px]">
+        <span class="font-semibold ml-2">Invite a Friend</span>
         <div class="flex items-center">
           <div class="flex items-center mr-1">
-            <img src="assets/icons/coin.svg" alt="Coin" class="h-8" />
+            <img src="assets/icons/coin.svg" alt="Coin" class="h-4 mr-1" />
             5
           </div>
           <span> for you and your friend</span>
@@ -41,20 +41,20 @@
     </div>
 
     <div
-      class="flex border-toxic px-1 py-2 gap-1 items-center h-[80px] relative"
+      class="flex border-toxic px-1 py-2 gap-1 items-center h-[66px] relative"
     >
       <img
         src="assets/star.png"
         alt="Gift"
         class="h-6 absolute left-[-5px] top-[-10px]"
       />
-      <img src="assets/gifts.png" alt="Gift" class="h-[80px]" />
+      <img src="assets/gifts.png" alt="Gift" class="h-[50px]" />
 
-      <div class="flex flex-col justify-between gap-3">
-        <span class="font-semibold text-[20px] ml-2">Invite a Friend</span>
+      <div class="flex flex-col justify-between gap-3 text-[13px]">
+        <span class="font-semibold ml-2">Invite a Friend</span>
         <div class="flex items-center">
           <div class="flex items-center mr-1">
-            <img src="assets/icons/coin.svg" alt="Coin" class="h-8" />
+            <img src="assets/icons/coin.svg" alt="Coin" class="h-4 mr-1" />
             10
           </div>
           <span> for you and your friend</span>
@@ -66,13 +66,20 @@
   <p class="text-[20px] text-center mt-6 font-[300]">Referrals (126)</p>
 
   <div
-    class="bg-[#3F4248] rounded-[16px] flex items-center h-[64px] mt-2 mx-4 mb-12"
+    class="bg-[#3F4248] rounded-[16px] flex items-center h-[56px] mt-2 mx-4 mb-12"
   >
-    <img
-      src="assets/circle-person.png"
-      alt="Person in circle"
-      class="h-[64px]"
-    />
+    <img src="assets/referal.png" alt="Person in circle" class="h-[56px]"/>
+    <div class="flex w-full place-content-between">
+      <div class="flex flex-col text-[13px]">
+        <span>Alex</span>
+        <span>2 | Beginner</span>
+      </div>
+      <div class="flex text-[13px] whitespace-nowrap mr-6 mt-2">
+        <span class="mr-2">Earned</span>
+        <img src="assets/icons/coin.svg" alt="coin" class="h-5 mr-2 mt-0"/>
+        <span>115K</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -82,32 +89,33 @@
   height="500px"
   padding="10px"
   margin="20px 0 0 0"
+  className="share-bg"
   ignoreClickOutsideClass="ignore-click-outside"
 >
   <div class="flex flex-col items-center">
-    <span class="text-white font-semibold text-[30px] text-center"
+    <span class="text-white font-semibold text-[20px] text-center"
       >Bonus for Leveling Up</span
     >
-    <span class="text-[#707276] text-[12px] text-center max-w-[270px]"
+    <span class="text-[#707276] text-[10px] text-center max-w-[220px]"
       >When your friends level up, you will receive a bonus</span
     >
   </div>
 
-  <div class="flex px-4 py-2 text-white mt-4 text-[14px]">
+  <div class="flex px-4 py-2 text-white mt-2 text-[12px]">
     <div class="flex-1 ml-4">Level</div>
-    <div class="w-[80px] pl-[16px]">Regular</div>
-    <div class="w-[80px] pl-[16px]">Premium</div>
+    <div class="w-[80px] pl-[10px]">Regular</div>
+    <div class="w-[80px] pl-[10px]">Premium</div>
   </div>
 
-  <div class="flex flex-col gap-2 text-white text-[14px] font-semibold">
+  <div class="flex flex-col gap-2 text-white text-[12px] font-semibold">
     <div class="bg-[#3F4248] flex rounded-[12px] px-4 py-3">
       <div class="flex-1 flex items-center">Homeless</div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>10</span>
       </div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>15</span>
       </div>
     </div>
@@ -116,11 +124,11 @@
     <div class="bg-[#3F4248] flex rounded-[12px] px-4 py-3">
       <div class="flex-1 flex items-center">Beginner</div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>15</span>
       </div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>20</span>
       </div>
     </div>
@@ -129,11 +137,11 @@
     <div class="bg-[#3F4248] flex rounded-[12px] px-4 py-3">
       <div class="flex-1 flex items-center">Student</div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>25</span>
       </div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>30</span>
       </div>
     </div>
@@ -142,11 +150,11 @@
     <div class="bg-[#3F4248] flex rounded-[12px] px-4 py-3">
       <div class="flex-1 flex items-center">Workman</div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>50</span>
       </div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>70</span>
       </div>
     </div>
@@ -155,11 +163,11 @@
     <div class="bg-[#3F4248] flex rounded-[12px] px-4 py-3">
       <div class="flex-1 flex items-center">Businessman</div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>100</span>
       </div>
       <div class="w-[80px] flex gap-2">
-        <img src="assets/icons/coin.svg" alt="coin" class="h-6" />
+        <img src="assets/icons/coin.svg" alt="coin" class="h-4" />
         <span>150</span>
       </div>
     </div>

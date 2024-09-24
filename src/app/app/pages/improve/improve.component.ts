@@ -14,28 +14,28 @@ export class ImproveComponent {
   activeTab = 'Personal';
   activeIndex: number = 0;
   bodyItems = [
-    { title: 'Food', image: '/food.jpg', cost: 15, income: 320, balance: 45 },
-    { title: 'Sport', image: '/sport.jpg', cost: 25, income: 320, balance: 80 },
+    { title: 'Food', image: 'assets/default.png', cost: 15, income: 320, balance: 45 },
+    { title: 'Sport', image: 'assets/default.png', cost: 25, income: 320, balance: 80 },
     {
       title: 'Medicine',
-      image: '/medicine.jpg',
+      image: 'assets/default.png',
       cost: 75,
       income: 320,
       balance: 230,
     },
   ];
   skillItems = [
-    { title: 'Mind', image: '/mind.jpg', cost: 110, income: 320, balance: 290 },
+    { title: 'Mind', image: 'assets/default.png', cost: 110, income: 320, balance: 290 },
     {
       title: 'Ethics',
-      image: '/ethics.jpg',
+      image: 'assets/default.png',
       cost: 40,
       income: 320,
       balance: 110,
     },
     {
       title: 'Emotions',
-      image: '/emotions.jpg',
+      image: 'assets/default.png',
       cost: 150,
       income: 320,
       balance: 330,

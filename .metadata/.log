@@ -1,0 +1,1362 @@
+!SESSION 2024-09-23 21:30:15.212 -----------------------------------------------
+eclipse.buildId=18.0.0.CI-AI
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product com.genuitec.eclipse.code.angularide.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.genuitec.eclipse.code.angularide.product
+
+!ENTRY com.genuitec.eclipse.code.ui 1 0 2024-09-23 21:30:55.451
+!MESSAGE CodeMix Engine will be started momentarily to support development activities
+
+!ENTRY org.eclipse.ui 2 0 2024-09-23 21:30:56.225
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-09-23 21:30:56.225
+!MESSAGE Cannot bind to an undefined command: plug-in='com.genuitec.eclipse.theming.ui', id='com.genuitec.myeclipse.help.darktheme.commandid'
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2024-09-23 21:30:57.022
+!MESSAGE A DevStyle Theme is being activated on this workspace; preparing colors and configuration
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2024-09-23 21:30:57.040
+!MESSAGE DevStyle has archived current color configurations to alternate preferences - will be restored when switching out of the DevStyle Theme
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-09-23 21:31:01.871
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Дмитрий'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2024-09-23 21:31:04.892
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.7.v20180504-0806
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:927)
+	at com.google.gson.Gson.fromJson(Gson.java:892)
+	at com.google.gson.Gson.fromJson(Gson.java:841)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 9 more
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:31:12.684
+!MESSAGE Initializing CodeMix Engine's settings file at C:\Kwork\hamster\hamster\.metadata\codemix.code-workspace
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:31:12.702
+!MESSAGE Verifying CodeMix Engine runtime integrity...
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:31:12.705
+!MESSAGE IntegrityCheck: Artifacts located at: [F:\AngularIDE\artifacts.xml]
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:31:13.162
+!MESSAGE Integrity check PASSED
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.382
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Telegram Desktop\Telegram.exe                                             8560             16556      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.395
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\FigmaAgent\figma_agent.exe                                                  17340            13356      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.396
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Yandex\YandexDisk2\3.2.42.5054\YandexDisk2.exe                            5052             2872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.397
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3296             3432       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.398
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             3248       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.399
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             12352      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.401
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5952       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.402
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             6532       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.403
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.404
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\SourceTree.exe                                        13508            12204      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.405
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\tools\putty\pageant.exe                               12204            16596      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.406
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            6588             18468      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.407
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            16656      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.408
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            436        ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.410
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            7204       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.411
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            21864      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:31:13.413
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            9664       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:31:17.649
+!MESSAGE CodeMix Engine engine has been started
+!SESSION 2024-09-23 21:33:00.413 -----------------------------------------------
+eclipse.buildId=18.0.0.CI-AI
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product com.genuitec.eclipse.code.angularide.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.genuitec.eclipse.code.angularide.product
+
+!ENTRY com.genuitec.eclipse.code.ui 1 0 2024-09-23 21:36:25.329
+!MESSAGE CodeMix Engine will be started momentarily to support development activities
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-09-23 21:36:29.955
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Дмитрий'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2024-09-23 21:36:33.166
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.7.v20180504-0806
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:927)
+	at com.google.gson.Gson.fromJson(Gson.java:892)
+	at com.google.gson.Gson.fromJson(Gson.java:841)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 9 more
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:36:36.008
+!MESSAGE Verifying CodeMix Engine runtime integrity...
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:36:36.011
+!MESSAGE IntegrityCheck: Artifacts located at: [F:\AngularIDE\artifacts.xml]
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:36:36.018
+!MESSAGE Integrity check PASSED
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.232
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Telegram Desktop\Telegram.exe                                             8560             16556      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.244
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\FigmaAgent\figma_agent.exe                                                  17340            13356      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.245
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Yandex\YandexDisk2\3.2.42.5054\YandexDisk2.exe                            5052             2872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.246
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3296             3432       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.247
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             3248       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.248
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             12352      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.249
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5952       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.250
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             6532       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.251
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.252
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\SourceTree.exe                                        13508            12204      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.253
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\tools\putty\pageant.exe                               12204            16596      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.253
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            6588             18468      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.254
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            16656      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.255
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            436        ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.256
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            7204       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.257
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            21864      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:36:36.258
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            9664       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:36:36.508
+!MESSAGE CodeMix Engine engine has been started
+!SESSION 2024-09-23 21:40:31.726 -----------------------------------------------
+eclipse.buildId=18.0.0.CI-AI
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product com.genuitec.eclipse.code.angularide.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.genuitec.eclipse.code.angularide.product
+
+!ENTRY com.genuitec.eclipse.code.ui 1 0 2024-09-23 21:40:43.889
+!MESSAGE CodeMix Engine will be started momentarily to support development activities
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-09-23 21:40:49.059
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Дмитрий'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2024-09-23 21:40:52.000
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.7.v20180504-0806
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:927)
+	at com.google.gson.Gson.fromJson(Gson.java:892)
+	at com.google.gson.Gson.fromJson(Gson.java:841)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 9 more
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:40:54.624
+!MESSAGE Verifying CodeMix Engine runtime integrity...
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:40:54.628
+!MESSAGE IntegrityCheck: Artifacts located at: [F:\AngularIDE\artifacts.xml]
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:40:54.635
+!MESSAGE Integrity check PASSED
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.838
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Telegram Desktop\Telegram.exe                                             8560             16556      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.851
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\FigmaAgent\figma_agent.exe                                                  17340            13356      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.852
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Yandex\YandexDisk2\3.2.42.5054\YandexDisk2.exe                            5052             2872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.852
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3296             3432       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.853
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             3248       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.854
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             12352      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.855
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5952       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.856
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             6532       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.857
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.858
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\SourceTree.exe                                        13508            12204      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.858
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\tools\putty\pageant.exe                               12204            16596      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.859
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            6588             18468      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.859
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            16656      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.860
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            436        ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.861
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            7204       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.861
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            21864      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:40:54.862
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            9664       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:40:55.108
+!MESSAGE CodeMix Engine engine has been started
+!SESSION 2024-09-23 21:41:17.189 -----------------------------------------------
+eclipse.buildId=18.0.0.CI-AI
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product com.genuitec.eclipse.code.angularide.product -product com.genuitec.eclipse.code.angularide.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.genuitec.eclipse.code.angularide.product -data C:/Kwork/hamster/hamster -product com.genuitec.eclipse.code.angularide.product
+
+!ENTRY com.genuitec.eclipse.code.ui 1 0 2024-09-23 21:41:19.221
+!MESSAGE CodeMix Engine will be started momentarily to support development activities
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-09-23 21:41:25.142
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Дмитрий'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2024-09-23 21:41:28.093
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.7.v20180504-0806
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:927)
+	at com.google.gson.Gson.fromJson(Gson.java:892)
+	at com.google.gson.Gson.fromJson(Gson.java:841)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 9 more
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:41:30.837
+!MESSAGE Verifying CodeMix Engine runtime integrity...
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:41:30.842
+!MESSAGE IntegrityCheck: Artifacts located at: [F:\AngularIDE\artifacts.xml]
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:41:30.851
+!MESSAGE Integrity check PASSED
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.073
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Telegram Desktop\Telegram.exe                                             8560             16556      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.074
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\FigmaAgent\figma_agent.exe                                                  17340            13356      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.074
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Roaming\Yandex\YandexDisk2\3.2.42.5054\YandexDisk2.exe                            5052             2872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.075
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3296             3432       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.075
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             3248       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.076
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             12352      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.076
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5952       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.077
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             6532       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.077
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Figma\app-116.5.17\Figma.exe                                                3432             5872       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.078
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\SourceTree.exe                                        13508            12204      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.078
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\SourceTree\app-3.4.10\tools\putty\pageant.exe                               12204            16596      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.079
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            6588             18468      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.080
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            16656      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.081
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            436        ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.081
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            7204       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.082
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            21864      ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2024-09-23 21:41:31.082
+!MESSAGE Unable to parse processes from [C:\Users\„¬ЁваЁ©\AppData\Local\Discord\app-1.0.9163\Discord.exe                                            18468            9664       ]
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findProcesses(EmbeddedEngine.java:272)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.findOrphanedEngines(EmbeddedEngine.java:217)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:65)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2024-09-23 21:41:31.351
+!MESSAGE CodeMix Engine engine has been started

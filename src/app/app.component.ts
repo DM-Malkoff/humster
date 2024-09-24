@@ -20,21 +20,20 @@ import { RoutesPath } from './app.types';
 
       @if (currentUrl !== '/lead') {
       <div
-        class="flex justify-center h-[80px] gap-12 nav-background px-2 py-4 border-main-theme border-t text-white"
+        class="flex justify-center h-[64px] gap-12 nav-background px-2 py-2 border-main-theme border-t text-white"
       >
         <div class="relative w-[40px] h-[40px]">
           <img
             routerLink="main"
             [class]="imageClasses"
             src="assets/person.png"
-            class="h-[80px]"
+            class="h-[64px]"
           />
         </div>
         <div
           *ngFor="let item of bottomNavItems"
           class="flex flex-col items-center"
           [routerLink]="item.to"
-          (click)="onItemClick($event)"
         >
           <img
             [src]="isActive(item.to) ? item.activeSrc : item.src"
@@ -60,14 +59,6 @@ export class AppComponent implements OnInit {
   }
 
   constructor(private router: Router) {}
-  onItemClick(event: Event): void {
-    const target = event.currentTarget as HTMLElement;
-    target.classList.add('vibrate');
-
-    setTimeout(() => {
-      target.classList.remove('vibrate');
-    }, 200);
-  }
 
   isActive(path: string) {
     return this.currentUrl.includes(path);

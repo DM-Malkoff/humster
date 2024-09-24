@@ -1,0 +1,16 @@
+сен 23, 2024 9:31:01 PM com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
+INFO: Package starting up at Mon Sep 23 21:31:01 SAMT 2024
+сен 23, 2024 9:31:12 PM org.glassfish.grizzly.nio.NIOTransport start
+INFO: Adjusting kernel thread pool to max size 9 to handle configured number of SelectorRunners
+сен 23, 2024 9:31:12 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [127.0.0.1:53662]
+сен 23, 2024 9:31:12 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer] Started.
+сен 23, 2024 9:31:12 PM org.glassfish.tyrus.server.Server start
+INFO: WebSocket Registered apps: URLs all start with ws://127.0.0.1:53662
+сен 23, 2024 9:31:12 PM org.glassfish.tyrus.server.Server start
+INFO: WebSocket server started.
+сен 23, 2024 9:32:56 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [127.0.0.1:53662]
+сен 23, 2024 9:32:56 PM org.glassfish.tyrus.server.Server stop
+INFO: Websocket Server stopped.

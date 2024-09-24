@@ -38,12 +38,9 @@ export class EarnComponent {
   }
 
   getHeight() {
-    if (this.selectedShare === 'youtube') {
+    if (this.selectedShare === 'youtube' || this.selectedShare === 'dailyReward') {
       return '570px';
-    } else if (this.selectedShare === 'dailyReward') {
-      return '650px';
-    } else {
-      return '500px';
     }
+    return '500px';
   }
 }
