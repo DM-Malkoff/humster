@@ -20,21 +20,21 @@ import { RoutesPath } from './app.types';
 
       @if (currentUrl !== '/lead') {
       <div
-        class="flex justify-center h-[64px] gap-12 nav-background px-2 py-2 border-main-theme border-t text-white"
+        class="flex justify-center h-[70px] gap-12 nav-background px-2 pt-3 py-2 border-main-theme border-t text-white"
       >
         <div class="relative w-[40px] h-[40px]">
           <img
             routerLink="main"
             [class]="imageClasses"
             src="assets/person.png"
-            class="h-[64px]"
+            class="h-[60px]"
           />
         </div>
         <div
           *ngFor="let item of bottomNavItems"
           class="flex flex-col items-center"
           [routerLink]="item.to"
-          (click)="vibrate()"
+          (click)="vibrate"
         >
           <img
             [src]="isActive(item.to) ? item.activeSrc : item.src"
