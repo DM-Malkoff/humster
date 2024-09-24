@@ -13,7 +13,7 @@ module.exports = {
         'custom-gradient': 'linear-gradient(to right, rgba(63, 66, 72, 0.8), rgba(253, 202, 56, 0.8))',
       },
       height: {
-        '22': '22rem',
+        '23': '23rem',
       },
     },
   },
