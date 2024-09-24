@@ -17,22 +17,22 @@
 
       @if (activeTab === 'Personal') {
 
-      <h2 class="text-sm mb-2">Body</h2>
+      <h2 class="text-sm mb-4">Body</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
       </div>
 
-      <h2 class="text-sm mb-2">Skills</h2>
+      <h2 class="text-sm mb-4">Skills</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card *ngFor="let item of skillItems" [item]="item"></app-card>
       </div>
 
-      <h2 class="text-sm mb-2">Management</h2>
+      <h2 class="text-sm mb-4">Management</h2>
       <div class="flex flex-col gap-2">
         <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
       </div>
       } @if (activeTab === 'Work') {
-      <h2 class="text-sm mb-2">Beginner</h2>
+      <h2 class="text-sm mb-4">Beginner</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of bodyItems"
@@ -41,7 +41,7 @@
         ></app-card>
       </div>
 
-      <h2 class="text-sm mb-2">Student</h2>
+      <h2 class="text-sm mb-4">Student</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of skillItems"
@@ -49,7 +49,7 @@
           mode="additional"
         ></app-card>
       </div>
-      <h2 class="text-sm mb-2">Worker</h2>
+      <h2 class="text-sm mb-4">Worker</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of skillItems"
@@ -57,7 +57,7 @@
           mode="additional"
         ></app-card>
       </div>
-      <h2 class="text-sm mb-2">Businessman</h2>
+      <h2 class="text-sm mb-4">Businessman</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of skillItems"
@@ -66,7 +66,7 @@
         ></app-card>
       </div>
       } @if (activeTab === 'Realty') {
-      <h2 class="text-sm mb-2">Estate</h2>
+      <h2 class="text-sm mb-4">Estate</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of bodyItems"
@@ -75,7 +75,7 @@
         ></app-card>
       </div>
 
-      <h2 class="text-sm mb-2">Profit</h2>
+      <h2 class="text-sm mb-4">Profit</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of skillItems"
@@ -84,7 +84,7 @@
           mode="additional"
         ></app-card>
       </div>
-      <h2 class="text-sm mb-2">Digital assets</h2>
+      <h2 class="text-sm mb-4">Digital assets</h2>
       <div class="flex flex-col gap-2">
         <app-card
           *ngFor="let item of skillItems"

@@ -8,7 +8,7 @@ import { NgIf } from '@angular/common';
   imports: [CircleProgressComponent, NgIf],
   template: `
     <div
-      class="relative text-[13px] bg-[#3F4248] rounded-xl flex items-center p-2 pl-0 relative h-[60px] border-main-theme border"
+      class="relative text-[13px] bg-[#3F4248] rounded-xl flex items-center p-2 pl-0 relative h-[68px] border-main-theme border"
     >
       <div *ngIf="isUnActive" class="absolute bg-black inset-0 bg-opacity-20 rounded-xl z-50"></div>
       <!--  -->
@@ -25,7 +25,7 @@ import { NgIf } from '@angular/common';
       <img
         [src]="item.image"
         [alt]="item.title"
-        class="w-[60px] h-[60px] rounded-lg mr-4"
+        class="w-[66px] h-[66px] rounded-lg mr-4 mt-[1px]"
       />
       
       <div class="flex flex-col flex-grow h-full justify-between">
