@@ -20,7 +20,7 @@ import { RoutesPath } from './app.types';
 
       @if (currentUrl !== '/lead') {
       <div
-        class="flex justify-center h-[70px] gap-12 nav-background px-2 pt-3 py-2 border-main-theme border-t text-white"
+        class="flex justify-center h-[70px] gap-12 nav-background px-2 pt-3 py-2 border-main-theme border-t text-white pr-[20px]"
       >
         <div class="relative w-[40px] h-[40px]">
           <img
@@ -32,7 +32,7 @@ import { RoutesPath } from './app.types';
         </div>
         <div
           *ngFor="let item of bottomNavItems"
-          class="flex flex-col items-center"
+          class="flex flex-col items-center w-[30px]"
           [routerLink]="item.to"
           (click)="vibrate"
         >
