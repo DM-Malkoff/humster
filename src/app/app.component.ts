@@ -27,7 +27,7 @@ import { RoutesPath } from './app.types';
             routerLink="main"
             [class]="imageClasses"
             src="assets/person.png"
-            class="h-[60px]"
+            class="h-[80px]"
           />
         </div>
         <div
