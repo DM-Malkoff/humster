@@ -69,9 +69,12 @@
       <h2 class="text-sm mb-4">Estate</h2>
       <div class="flex flex-col gap-2 mb-6">
         <app-card
-          *ngFor="let item of bodyItems"
+          *ngFor="let item of bodyItems; let i = index"
           [item]="item"
           mode="additional"
+          [isUnActive]="item.isUnActive"
+          [needMoreFriedns] = "(i === 1 || i === 2) ? true : false"
+          [circleProgress] = "(i === 0 || i === 1) ? 50 : 0"
         ></app-card>
       </div>
 
@@ -79,17 +82,17 @@
       <div class="flex flex-col gap-2 mb-6">
         <app-card
           *ngFor="let item of skillItems"
+          mode="additional"
           [item]="item"
           [isUnActive]=true
-          mode="additional"
         ></app-card>
       </div>
       <h2 class="text-sm mb-4">Digital assets</h2>
       <div class="flex flex-col gap-2">
         <app-card
           *ngFor="let item of skillItems"
-          [item]="item"
           mode="additional"
+          [item]="item"
         ></app-card>
       </div>
       }

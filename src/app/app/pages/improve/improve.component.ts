@@ -14,14 +14,15 @@ export class ImproveComponent {
   activeTab = 'Personal';
   activeIndex: number = 0;
   bodyItems = [
-    { title: 'Food', image: 'assets/default.png', cost: 15, income: 320, balance: 45 },
-    { title: 'Sport', image: 'assets/default.png', cost: 25, income: 320, balance: 80 },
+    { title: 'Food', image: 'assets/default.png', cost: 15, income: 320, balance: 45, isUnActive: true },
+    { title: 'Sport', image: 'assets/default.png', cost: 25, income: 320, balance: 80, isUnActive: true },
     {
       title: 'Medicine',
       image: 'assets/default.png',
       cost: 75,
       income: 320,
       balance: 230,
+      isUnActive: false
     },
   ];
   skillItems = [
