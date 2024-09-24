@@ -34,6 +34,7 @@ import { RoutesPath } from './app.types';
           *ngFor="let item of bottomNavItems"
           class="flex flex-col items-center"
           [routerLink]="item.to"
+          (click)="vibrate()"
         >
           <img
             [src]="isActive(item.to) ? item.activeSrc : item.src"
@@ -59,6 +60,14 @@ export class AppComponent implements OnInit {
   }
 
   constructor(private router: Router) {}
+
+  vibrate() {
+    if (navigator.vibrate) {
+      navigator.vibrate(200);
+    } else {
+      console.log('Вибрация не поддерживается на этом устройстве');
+    }
+  }
 
   isActive(path: string) {
     return this.currentUrl.includes(path);
