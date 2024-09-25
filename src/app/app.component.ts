@@ -88,12 +88,12 @@ export class AppComponent implements OnInit {
       tg.WebApp.headerColor = '#00000';
       // tg.WebApp.expand();
     }
-
+    Telegram.WebApp.setHeaderColor('#00000');
     if (Telegram.WebApp.isEmbedded) {
       Telegram.WebApp.ready();
       // Получите информацию о пользователе
       const user = Telegram.WebApp.initDataUnsafe.user;
-      Telegram.WebApp.headerColor = '#00000';
+      Telegram.WebApp.setHeaderColor('#00000');
       console.log(user);
     }
 
