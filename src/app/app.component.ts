@@ -7,8 +7,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { RoutesPath } from './app.types';
-
-declare var Telegram: any;
+import {initBackButton} from "@telegram-apps/sdk";
 
 @Component({
   selector: 'app-root',
@@ -81,21 +80,15 @@ export class AppComponent implements OnInit {
         this.currentUrl = event.urlAfterRedirects;
       }
     });
+    const [backButton] = initBackButton();
+    backButton.show();
 
-    if ('Telegram' in window) {
-      const tg = window.Telegram;
-      // tg.WebApp.headerColor = '#212121';
-      tg.WebApp.headerColor = '#00000';
-      // tg.WebApp.expand();
-    }
-    Telegram.WebApp.setHeaderColor('#00000');
-    if (Telegram.WebApp.isEmbedded) {
-      Telegram.WebApp.ready();
-      // Получите информацию о пользователе
-      const user = Telegram.WebApp.initDataUnsafe.user;
-      Telegram.WebApp.setHeaderColor('#00000');
-      console.log(user);
-    }
+    // if ('Telegram' in window) {
+    //   const tg = window.Telegram;
+    //   // tg.WebApp.headerColor = '#212121';
+    //   tg.WebApp.headerColor = '#00000';
+    //   // tg.WebApp.expand();
+    // }
 
     // const tg = window.Telegram?.WebApp;
     // const user_id = tg.initDataUnsafe.user.id || 0;
