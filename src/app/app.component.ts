@@ -24,12 +24,7 @@ import { initBackButton } from '@telegram-apps/sdk';
         class="flex justify-center h-[70px] gap-12 nav-background px-2 pt-3 py-2 border-main-theme border-t text-white pr-[20px]"
       >
         <div class="relative w-[40px] h-[40px]">
-          <img
-            routerLink="main"
-            [class]="imageClasses"
-            src="assets/person.png"
-            class="h-[80px]"
-          />
+          <object routerLink="main" style="pointer-events:none" [class]="imageClasses" type="image/svg+xml" data="assets/person.png"></object>
         </div>
         <div
           *ngFor="let item of bottomNavItems"
@@ -41,6 +36,7 @@ import { initBackButton } from '@telegram-apps/sdk';
             [src]="isActive(item.to) ? item.activeSrc : item.src"
             class="h-7 mb-1"
           />
+          <object style="pointer-events:none" class="h-7 mb-1" type="image/svg+xml" data="isActive(item.to) ? item.activeSrc : item.src"></object>
           <span class="text-[10px] text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
