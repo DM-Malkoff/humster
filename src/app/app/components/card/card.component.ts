@@ -12,29 +12,29 @@ import { CommonModule } from '@angular/common';
       class="relative text-[13px] bg-[#3F4248] rounded-xl flex items-center p-1 pl-0 relative h-[68px] border-main-theme border"
     >
       <div *ngIf="isUnActive" class="absolute bg-black inset-0 bg-opacity-20 rounded-xl z-50"></div>
-      <app-circle-progress 
-        *ngIf="circleProgress" 
+      <app-circle-progress
+        *ngIf="circleProgress"
         [progress]="circleProgress"
         class="absolute ml-[16px]"
       >
-          1m 
+          1m
       </app-circle-progress>
       <img
         [src]="item.image"
         [alt]="item.title"
         class="w-[66px] h-[66px] rounded-lg mr-4 mt-[1px]"
       />
-      
+
       <div class="flex w-full justify-between">
         <div class="flex flex-col h-full">
           <span>{{ item.title }}</span>
-    
+
           <div class="flex gap-1">
-            <img src="assets/icons/coin-up_new.svg" alt="Star" class="w-4 h-4 mt-[1px]" />
+            <object style="pointer-events:none" class="w-4 h-4 mt-[1px]" type="image/svg+xml" data="assets/icons/coin-up_new.svg" alt="Star"></object>
             <span>{{ item.income }}</span>
           </div>
           <span *ngIf="needMoreFriedns" class="flex items-center">
-            <img src="assets/icons/lock.svg" alt="Coin" class="w-3 h-3 mr-1" />
+            <object style="pointer-events:none" class="w-3 h-3 mr-1" type="image/svg+xml" data="assets/icons/lock.svg" alt="Coin"></object>
             Need 1 more friends
           </span>
         </div>
@@ -51,7 +51,7 @@ import { CommonModule } from '@angular/common';
         <!--  -->
 
         <div class="flex flex-row items-center ml-4 gap-1 mr-2">
-          <img src="assets/icons/coin.svg" alt="Coin" class="w-4 h-4" />
+          <object style="pointer-events:none" class="w-4 h-4" type="image/svg+xml" data="assets/icons/coin.svg" alt="Coin"></object>
           <span>{{ item.balance }}</span>
         </div>
       </div>
