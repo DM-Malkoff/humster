@@ -76,19 +76,19 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    const [backButton] = initBackButton();
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
+
+        if (this.currentUrl !== '/'){
+          backButton.show();
+        }
+        backButton.on('click', () => {
+          window.location.href = '/';
+        });
       }
-    });
-
-    const [backButton] = initBackButton();
-
-    if (this.currentUrl !== '/'){
-      backButton.show();
-    }
-    backButton.on('click', () => {
-      window.location.href = '/';
     });
 
     if (this.currentUrl === '/'){
