@@ -85,6 +85,20 @@ export class AppComponent implements OnInit {
       tg.WebApp.headerColor = '#212121';
       tg.WebApp.expand();
     }
+
+  const tg = window.Telegram?.WebApp;
+  const user_id = tg.initDataUnsafe.user.id || 0;
+  if (tg && tg.BackButton) {
+    const BackButton = tg.BackButton;
+
+    BackButton.show();
+
+    BackButton.onClick(() => {
+      window.location.href = '/';
+    });
+    // getData();
+    BackButton.offClick();
+  }
   }
   bottomNavItems = [
     {
