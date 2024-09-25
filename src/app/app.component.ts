@@ -7,7 +7,8 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { RoutesPath } from './app.types';
-import {initBackButton} from "@telegram-apps/sdk";
+import { initBackButton } from '@telegram-apps/sdk';
+
 
 @Component({
   selector: 'app-root',
@@ -80,12 +81,13 @@ export class AppComponent implements OnInit {
         this.currentUrl = event.urlAfterRedirects;
       }
     });
+
     const [backButton] = initBackButton();
 
     if (this.currentUrl !== '/'){
       backButton.show();
     }
-    backButton.onClick(() => {
+    backButton.on('click', () => {
       window.location.href = '/';
     });
 
