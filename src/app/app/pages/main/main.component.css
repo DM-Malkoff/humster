@@ -67,8 +67,3 @@
 .timer {
   transition: width 1s;
 }
-
-object{
-  pointers-events: none;
-  z-index: 0;
-}

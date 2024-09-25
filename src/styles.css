@@ -165,3 +165,8 @@ body,
   animation: shake 0.5s;
   animation-iteration-count: 2; /* 4 iterations for 2 seconds */
 }
+
+object{
+  pointers-events: none;
+  z-index: 0;
+}
