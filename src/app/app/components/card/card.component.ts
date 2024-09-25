@@ -50,23 +50,9 @@ import { CommonModule } from '@angular/common';
         </div>
         <!--  -->
 
-        <div
-          *ngIf="mode === 'additional'"
-          class="flex flex-row items-center ml-4 gap-1 mr-2"
-        >
+        <div class="flex flex-row items-center ml-4 gap-1 mr-2">
           <img src="assets/icons/coin.svg" alt="Coin" class="w-4 h-4" />
-
           <span>{{ item.balance }}</span>
-        </div>
-
-        <div
-          *ngIf="mode === 'base'"
-          class="flex flex-row items-center ml-4 gap-3"
-        >
-          <span class="flex items-center">
-            <img src="assets/icons/coin.svg" alt="Star" class="w-4 h-4 mr-1 mt=[1px]" />
-            {{ item.balance }}
-          </span>
         </div>
       </div>
     </div>
