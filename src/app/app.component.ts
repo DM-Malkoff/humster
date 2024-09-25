@@ -91,6 +91,10 @@ export class AppComponent implements OnInit {
       window.location.href = '/';
     });
 
+    if (this.currentUrl === '/'){
+      backButton.hide();
+    }
+
     // if ('Telegram' in window) {
     //   const tg = window.Telegram;
     //   // tg.WebApp.headerColor = '#212121';
