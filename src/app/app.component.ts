@@ -75,7 +75,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('111')
     const [backButton] = initBackButton();
 
     this.router.events.subscribe((event) => {
@@ -83,7 +82,8 @@ export class AppComponent implements OnInit {
         this.currentUrl = event.urlAfterRedirects;
 
         this.bottomNavItems.forEach((item) => {
-          if(this.currentUrl === item.to){
+          console.log(item.to)
+          if(this.currentUrl === `/${item.to}`){
             backButton.show();
           } else {
             backButton.hide();
