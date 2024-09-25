@@ -82,7 +82,8 @@ export class AppComponent implements OnInit {
 
     if ('Telegram' in window) {
       const tg = window.Telegram;
-      tg.WebApp.headerColor = '#212121';
+      // tg.WebApp.headerColor = '#212121';
+      tg.WebApp.headerColor = '#000';
       tg.WebApp.expand();
     }
 
