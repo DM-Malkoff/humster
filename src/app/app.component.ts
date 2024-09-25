@@ -82,11 +82,8 @@ export class AppComponent implements OnInit {
         this.currentUrl = event.urlAfterRedirects;
 
         this.bottomNavItems.forEach((item) => {
-          console.log(item.to)
           if(this.currentUrl === `/${item.to}`){
             backButton.show();
-          } else {
-            backButton.hide();
           }
         })
 
