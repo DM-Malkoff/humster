@@ -9,7 +9,6 @@ import {
 import { RoutesPath } from './app.types';
 import { initBackButton } from '@telegram-apps/sdk';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -76,45 +75,24 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('111')
     const [backButton] = initBackButton();
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
-
-        if (this.currentUrl !== '/'){
+        console.log('-->', this.currentUrl)
+        if (this.currentUrl !== '/main'){
           backButton.show();
         }
         backButton.on('click', () => {
           window.location.href = '/';
         });
+        if (this.currentUrl === '/main'){
+          backButton.hide();
+        }
       }
     });
-
-    if (this.currentUrl === '/'){
-      backButton.hide();
-    }
-
-    // if ('Telegram' in window) {
-    //   const tg = window.Telegram;
-    //   // tg.WebApp.headerColor = '#212121';
-    //   tg.WebApp.headerColor = '#00000';
-    //   // tg.WebApp.expand();
-    // }
-
-    // const tg = window.Telegram?.WebApp;
-    // const user_id = tg.initDataUnsafe.user.id || 0;
-    // if (tg && tg.BackButton) {
-    //   const BackButton = tg.BackButton;
-    //
-    //   BackButton.show();
-    //
-    //   BackButton.onClick(() => {
-    //     window.location.href = '/';
-    //   });
-    //   // getData();
-    //   BackButton.offClick();
-    // }
   }
   bottomNavItems = [
     {
