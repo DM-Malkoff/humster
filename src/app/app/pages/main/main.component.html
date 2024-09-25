@@ -60,18 +60,24 @@
 
   <div class="absolute-x-center bottom-[140px]">
     <div
-      class="header-block flex h-[40px] w-[200px] mt-[20px] rounded-xl border-main-theme border shadow-block text-white z-20"
+      class="relative header-block flex h-[40px] w-[200px] mt-[20px] rounded-xl border-main-theme border shadow-block text-white z-20"
     >
-      <div
-        class="header-block flex items-center justify-between p-4 h-full w-[150px] rounded-xl border-main-theme border text-white z-20"
-      >
-        <span class="text-[12px] font-semibold">1h 11m</span>
+      <div [style.width.px]="currentTimerWidth" class="timer absolute z-10 header-block  rounded-xl h-full border-main-theme border"></div>
 
-        <div class="flex gap-1 items-center">
-          <img src="assets/icons/coin.svg" alt="Coin" class="h-[20px]" />
-          <span class="text-white font-medium text-[14px]">8,537</span>
-        </div>
-      </div>
+
+          @if(timeIsOut){
+            <div class="absolute z-20 w-full flex items-center justify-center p-4 h-full text-white">
+              <span>Claim</span>
+            </div>
+          } @else {
+            <div class="absolute z-20 w-full flex items-center justify-between p-4 h-full text-white">
+              <span class="text-[12px] font-semibold">{{timeInSeconds | timeFormat}}</span>
+              <div class="flex gap-1 items-center">
+                <img src="assets/icons/coin.svg" alt="Coin" class="h-[20px]" />
+                <span class="text-white font-medium text-[14px]">8,537</span>
+              </div>
+            </div>
+          }
     </div>
   </div>
 </div>

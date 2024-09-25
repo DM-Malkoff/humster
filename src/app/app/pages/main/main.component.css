@@ -63,3 +63,7 @@
   transform: translateX(-50%);
   height: 80px;
 }
+
+.timer {
+  transition: width 1s;
+}
