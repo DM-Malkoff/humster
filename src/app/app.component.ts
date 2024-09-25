@@ -8,6 +8,8 @@ import {
 } from '@angular/router';
 import { RoutesPath } from './app.types';
 
+declare var Telegram: any;
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -87,19 +89,27 @@ export class AppComponent implements OnInit {
       // tg.WebApp.expand();
     }
 
-  const tg = window.Telegram?.WebApp;
-  const user_id = tg.initDataUnsafe.user.id || 0;
-  if (tg && tg.BackButton) {
-    const BackButton = tg.BackButton;
+    if (Telegram.WebApp.isEmbedded) {
+      Telegram.WebApp.ready();
+      // Получите информацию о пользователе
+      const user = Telegram.WebApp.initDataUnsafe.user;
+      Telegram.WebApp.headerColor = '#00000';
+      console.log(user);
+    }
 
-    BackButton.show();
-
-    BackButton.onClick(() => {
-      window.location.href = '/';
-    });
-    // getData();
-    BackButton.offClick();
-  }
+    // const tg = window.Telegram?.WebApp;
+    // const user_id = tg.initDataUnsafe.user.id || 0;
+    // if (tg && tg.BackButton) {
+    //   const BackButton = tg.BackButton;
+    //
+    //   BackButton.show();
+    //
+    //   BackButton.onClick(() => {
+    //     window.location.href = '/';
+    //   });
+    //   // getData();
+    //   BackButton.offClick();
+    // }
   }
   bottomNavItems = [
     {
