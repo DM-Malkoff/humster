@@ -41,7 +41,6 @@ import { CommonModule } from '@angular/common';
 
         <!--  -->
         <div
-          *ngIf="mode === 'base'"
           class="flex flex-col items-center justify-between h-full"
         >
           <span> Income </span>
@@ -68,7 +67,6 @@ import { CommonModule } from '@angular/common';
             <img src="assets/icons/coin.svg" alt="Star" class="w-4 h-4 mr-1 mt=[1px]" />
             {{ item.balance }}
           </span>
-          <app-circle-progress [progress]="10"> 1m </app-circle-progress>
         </div>
       </div>
     </div>
