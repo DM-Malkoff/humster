@@ -81,7 +81,13 @@ export class AppComponent implements OnInit {
       }
     });
     const [backButton] = initBackButton();
-    backButton.show();
+
+    if (this.currentUrl !== '/'){
+      backButton.show();
+    }
+    backButton.onClick(() => {
+      window.location.href = '/';
+    });
 
     // if ('Telegram' in window) {
     //   const tg = window.Telegram;
