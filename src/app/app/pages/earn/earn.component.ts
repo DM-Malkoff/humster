@@ -41,6 +41,6 @@ export class EarnComponent {
     if (this.selectedShare === 'youtube' || this.selectedShare === 'dailyReward') {
       return '570px';
     }
-    return '500px';
+    return '570px';
   }
 }
