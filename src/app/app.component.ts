@@ -81,16 +81,25 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
-        console.log('-->', this.currentUrl)
-        if (this.currentUrl !== '/main'){
-          backButton.show();
-        }
+
+        this.bottomNavItems.forEach((item) => {
+          if(this.currentUrl === item.to){
+            backButton.show();
+          } else {
+            backButton.hide();
+          }
+        })
+
         backButton.on('click', () => {
           window.location.href = '/';
         });
-        if (this.currentUrl === '/main'){
-          backButton.hide();
-        }
+        // if (this.currentUrl !== '/main'){
+        //   backButton.show();
+        // }
+
+        // if (this.currentUrl === '/main'){
+        //   backButton.hide();
+        // }
       }
     });
   }
