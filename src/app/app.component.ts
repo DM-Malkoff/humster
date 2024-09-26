@@ -37,7 +37,10 @@ import { initBackButton } from '@telegram-apps/sdk';
           [routerLink]="item.to"
           (click)="vibrate"
         >
-          <object style="pointer-events:none" class="h-7 mb-1" type="image/svg+xml" [data]="isActive(item.to) ? item.activeSrc : item.src" alt="Icon"></object>
+          <img
+            [src]="isActive(item.to) ? item.activeSrc : item.src"
+            class="h-7 mb-1"
+          />
           <span class="text-[10px] text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
@@ -98,28 +101,28 @@ export class AppComponent implements OnInit {
     {
       icon: 'fa-solid fa-wand-magic-sparkles',
       src: 'assets/icons/improve.svg',
-      activeSrc: 'assets/icons/improve-active.svg',
+      activeSrc: 'assets/icons/improve-active.png',
       label: 'Improve',
       to: RoutesPath.improve,
     },
     {
       icon: 'fa-solid fa-user-group',
       src: 'assets/icons/people.svg',
-      activeSrc: 'assets/icons/people-active.svg',
+      activeSrc: 'assets/icons/people-active.png',
       label: 'Friends',
       to: RoutesPath.friend,
     },
     {
       icon: 'fa-solid fa-sack-dollar',
       src: 'assets/icons/earn.svg',
-      activeSrc: 'assets/icons/earn-active.svg',
+      activeSrc: 'assets/icons/earn-active.png',
       label: 'Earn',
       to: RoutesPath.earn,
     },
     {
       icon: 'fa-solid fa-share-from-square',
       src: 'assets/icons/airdrop.svg',
-      activeSrc: 'assets/icons/airdrop-active.svg',
+      activeSrc: 'assets/icons/airdrop-active.png',
       label: 'AirDrop',
       to: RoutesPath.air_drop,
     },
