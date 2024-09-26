@@ -37,10 +37,7 @@ import { initBackButton } from '@telegram-apps/sdk';
           [routerLink]="item.to"
           (click)="vibrate"
         >
-          <img
-            [src]="isActive(item.to) ? item.activeSrc : item.src"
-            class="h-7 mb-1"
-          />
+          <object style="pointer-events:none" class="h-7 mb-1" type="image/svg+xml" [data]="isActive(item.to) ? item.activeSrc : item.src" alt="Icon"></object>
           <span class="text-[10px] text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
