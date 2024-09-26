@@ -1,5 +1,5 @@
 import {CommonModule, NgFor} from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {
   NavigationEnd,
   Router,
@@ -9,6 +9,7 @@ import {
 import { RoutesPath } from './app.types';
 import { initBackButton } from '@telegram-apps/sdk';
 import { DomSanitizer } from "@angular/platform-browser";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -53,7 +54,9 @@ import { DomSanitizer } from "@angular/platform-browser";
   `,
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
+  private routerEventsSubscription: Subscription | null = null;
+
   title = 'hamster';
 
   currentUrl = '';
@@ -84,7 +87,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const [backButton] = initBackButton();
 
-    this.router.events.subscribe((event) => {
+    this.routerEventsSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
 
@@ -140,5 +143,11 @@ export class AppComponent implements OnInit {
     {
       to: RoutesPath.lead,
     }
-  ]
+  ];
+
+  ngOnDestroy() {
+    if (this.routerEventsSubscription) {
+      this.routerEventsSubscription.unsubscribe();
+    }
+  }
 }
