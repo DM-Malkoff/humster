@@ -80,26 +80,36 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
-
+        this.updateBackButtonVisibility(backButton);
         // this.bottomNavItems.forEach((item) => {
         //   if(this.currentUrl === `/${item.to}`){
         //     backButton.show();
         //   }
         // })
-        if (this.currentUrl !== '/main') {
-          backButton.show();
-        }
 
         backButton.on('click', () => {
           window.location.href = '/';
         });
 
-        if (this.currentUrl === '/main'){
-          backButton.hide();
-        }
+        // if (this.currentUrl !== '/main') {
+        //   backButton.show();
+        // }
+        //
+        // if (this.currentUrl === '/main'){
+        //   backButton.hide();
+        // }
       }
     });
   }
+
+  updateBackButtonVisibility(backButton: any): void {
+    if (this.currentUrl !== '/main') {
+      backButton.show();
+    } else {
+      backButton.hide();
+    }
+  }
+
   bottomNavItems = [
     {
       icon: 'fa-solid fa-wand-magic-sparkles',
