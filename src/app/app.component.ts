@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import {CommonModule, NgFor} from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   NavigationEnd,
@@ -8,11 +8,12 @@ import {
 } from '@angular/router';
 import { RoutesPath } from './app.types';
 import { initBackButton } from '@telegram-apps/sdk';
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, RouterModule],
+  imports: [RouterOutlet, NgFor, RouterModule, CommonModule],
   template: `
     <main class="flex flex-col main-height">
       <div class="scroll">
@@ -37,10 +38,13 @@ import { initBackButton } from '@telegram-apps/sdk';
           [routerLink]="item.to"
           (click)="vibrate"
         >
-          <img
-            [src]="isActive(item.to) ? item.activeSrc : item.src"
+          <object
+            style="pointer-events:none"
             class="h-7 mb-1"
-          />
+            type="image/svg+xml"
+            [attr.data]="isActive(item.to) ? item.activeSrc : item.src"
+            alt=""
+          ></object>
           <span class="text-[10px] text-[#7A7C82]">{{ item.label }}</span>
         </div>
       </div>
@@ -60,7 +64,10 @@ export class AppComponent implements OnInit {
       : 'absolute-center h-34 !top-0 ';
   }
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private sanitizer: DomSanitizer,
+  ) {}
 
   vibrate() {
     if (navigator.vibrate) {
@@ -100,29 +107,29 @@ export class AppComponent implements OnInit {
   bottomNavItems = [
     {
       icon: 'fa-solid fa-wand-magic-sparkles',
-      src: 'assets/icons/improve.svg',
-      activeSrc: 'assets/icons/improve-active.png',
+      src: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/improve.svg'),
+      activeSrc: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/improve-active.svg'),
       label: 'Improve',
       to: RoutesPath.improve,
     },
     {
       icon: 'fa-solid fa-user-group',
-      src: 'assets/icons/people.svg',
-      activeSrc: 'assets/icons/people-active.png',
+      src: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/people.svg'),
+      activeSrc: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/people-active.svg'),
       label: 'Friends',
       to: RoutesPath.friend,
     },
     {
       icon: 'fa-solid fa-sack-dollar',
-      src: 'assets/icons/earn.svg',
-      activeSrc: 'assets/icons/earn-active.png',
+      src: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/earn.svg'),
+      activeSrc: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/earn-active.svg'),
       label: 'Earn',
       to: RoutesPath.earn,
     },
     {
       icon: 'fa-solid fa-share-from-square',
-      src: 'assets/icons/airdrop.svg',
-      activeSrc: 'assets/icons/airdrop-active.png',
+      src: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/airdrop.svg'),
+      activeSrc: this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/airdrop-active.svg'),
       label: 'AirDrop',
       to: RoutesPath.air_drop,
     },
