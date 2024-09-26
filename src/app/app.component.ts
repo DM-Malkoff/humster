@@ -86,7 +86,9 @@ export class AppComponent implements OnInit {
         //     backButton.show();
         //   }
         // })
-        backButton.show();
+        if (this.currentUrl !== '/main') {
+          backButton.show();
+        }
 
         backButton.on('click', () => {
           window.location.href = '/';
