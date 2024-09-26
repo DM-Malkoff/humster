@@ -16,7 +16,7 @@ export class SliderComponent {
       alt: 'Slide 1',
       title: 'Homeless',
     },
-    { image: 'assets/beginner.svg', alt: 'Slide 2', title: 'Begginer' },
+    { image: 'assets/beginner.png', alt: 'Slide 2', title: 'Begginer' },
     { image: 'assets/student.png', alt: 'Slide 3', title: 'Student' },
     { image: 'assets/workman.png', alt: 'Slide 4', title: 'Workman' },
     { image: 'assets/busy.png', alt: 'Slide 5', title: 'Businessman' },
