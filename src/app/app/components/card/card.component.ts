@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
     >
       <div *ngIf="isUnActive" class="absolute bg-black inset-0 bg-opacity-20 rounded-xl z-50"></div>
       <app-circle-progress
-        *ngIf="circleProgress"
+        *ngIf="circleProgress && !needMoreFriends"
         [progress]="circleProgress"
         class="absolute ml-[16px]"
       >1m</app-circle-progress>
@@ -45,7 +45,7 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
         <div>
-          <span *ngIf="needMoreFriedns" class="flex items-center">
+          <span *ngIf="needMoreFriends" class="flex items-center">
             <object style="pointer-events:none" class="w-3 h-3 mr-1" type="image/svg+xml" data="assets/icons/lock.svg" alt="Coin"></object>
             Need 1 more friends
           </span>
@@ -64,6 +64,6 @@ export class CardComponent {
     balance: number;
   };
   @Input() isUnActive: boolean = false;
-  @Input() needMoreFriedns: boolean = false;
+  @Input() needMoreFriends: boolean = false;
   @Input() circleProgress: number = 0;
 }
