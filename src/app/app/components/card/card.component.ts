@@ -69,13 +69,11 @@ export class CardComponent implements OnInit{
 
   public ngOnInit() {
     const initialCircleProgressTime = this.circleProgressTime;
-    const initialCircleProgress = this.circleProgress;
 
     const timer = setInterval(()  => {
       if (this.circleProgressTime > 0){
         this.circleProgressTime--;
-        const timePercent = this.getTimePercent(initialCircleProgressTime);
-        this.circleProgress = (initialCircleProgress/100)*timePercent;
+        this.circleProgress = this.getTimePercent(initialCircleProgressTime);
       } else {
         clearInterval(timer);
       }
@@ -83,6 +81,6 @@ export class CardComponent implements OnInit{
   }
 
   public getTimePercent(time: number): number {
-    return (this.circleProgressTime*100)/time;
+    return ((time - this.circleProgressTime) * 100) / time;
   }
 }
