@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
       <img
         [src]="item.image"
         [alt]="item.title"
-        class="w-[66px] h-[66px] rounded-lg mr-4 mt-[1px]"
+        class="w-[66px] h-[66px] rounded-lg mr-4"
       />
 
       <div class="flex w-full flex-col">
