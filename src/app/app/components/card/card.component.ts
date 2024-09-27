@@ -16,43 +16,39 @@ import { CommonModule } from '@angular/common';
         *ngIf="circleProgress"
         [progress]="circleProgress"
         class="absolute ml-[16px]"
-      >
-          1m
-      </app-circle-progress>
+      >1m</app-circle-progress>
       <img
         [src]="item.image"
         [alt]="item.title"
         class="w-[66px] h-[66px] rounded-lg mr-4 mt-[1px]"
       />
 
-      <div class="flex w-full justify-between">
-        <div class="flex flex-col h-full">
-          <span>{{ item.title }}</span>
+      <div class="flex w-full flex-col">
+        <div class="flex h-full justify-between">
+          <div class="flex flex-col">
+            <span>{{ item.title }}</span>
 
-          <div class="flex gap-1">
-            <object style="pointer-events:none" class="w-4 h-4 mt-[1px]" type="image/svg+xml" data="assets/icons/coin-up_new.svg" alt="Star"></object>
+            <div class="flex gap-1">
+              <object style="pointer-events:none" class="w-4 h-4 mt-[1px]" type="image/svg+xml" data="assets/icons/coin-up_new.svg" alt="Star"></object>
+              <span>{{ item.income }}</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-between h-full">
+            <span>Income</span>
             <span>{{ item.income }}</span>
           </div>
+
+          <div class="flex flex-row items-center ml-4 gap-1 mr-2">
+            <object style="pointer-events:none" class="w-4 h-4" type="image/svg+xml" data="assets/icons/coin.svg" alt="Coin"></object>
+            <span>{{ item.balance }}</span>
+          </div>
+        </div>
+        <div>
           <span *ngIf="needMoreFriedns" class="flex items-center">
             <object style="pointer-events:none" class="w-3 h-3 mr-1" type="image/svg+xml" data="assets/icons/lock.svg" alt="Coin"></object>
             Need 1 more friends
           </span>
-        </div>
-
-        <!--  -->
-        <div
-          class="flex flex-col items-center justify-between h-full"
-        >
-          <span> Income </span>
-          <span>
-            {{ item.income }}
-          </span>
-        </div>
-        <!--  -->
-
-        <div class="flex flex-row items-center ml-4 gap-1 mr-2">
-          <object style="pointer-events:none" class="w-4 h-4" type="image/svg+xml" data="assets/icons/coin.svg" alt="Coin"></object>
-          <span>{{ item.balance }}</span>
         </div>
       </div>
     </div>

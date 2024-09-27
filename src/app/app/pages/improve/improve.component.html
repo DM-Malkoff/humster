@@ -16,85 +16,84 @@
       </div>
 
       @if (activeTab === 'Personal') {
+        <h2 class="text-sm mb-4">Body</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
+        </div>
 
-      <h2 class="text-sm mb-4">Body</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
-      </div>
+        <h2 class="text-sm mb-4">Skills</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card *ngFor="let item of skillItems" [item]="item"></app-card>
+        </div>
 
-      <h2 class="text-sm mb-4">Skills</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card *ngFor="let item of skillItems" [item]="item"></app-card>
-      </div>
-
-      <h2 class="text-sm mb-4">Management</h2>
-      <div class="flex flex-col gap-2">
-        <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
-      </div>
+        <h2 class="text-sm mb-4">Management</h2>
+        <div class="flex flex-col gap-2">
+          <app-card *ngFor="let item of bodyItems" [item]="item"></app-card>
+        </div>
       } @if (activeTab === 'Work') {
-      <h2 class="text-sm mb-4">Beginner</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card
-          *ngFor="let item of bodyItems"
-          [item]="item"
-          mode="additional"
-        ></app-card>
-      </div>
+        <h2 class="text-sm mb-4">Beginner</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card
+            *ngFor="let item of bodyItems"
+            [item]="item"
+            mode="additional"
+          ></app-card>
+        </div>
 
-      <h2 class="text-sm mb-4">Student</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card
-          *ngFor="let item of skillItems"
-          [item]="item"
-          mode="additional"
-        ></app-card>
-      </div>
-      <h2 class="text-sm mb-4">Worker</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card
-          *ngFor="let item of skillItems"
-          [item]="item"
-          mode="additional"
-        ></app-card>
-      </div>
-      <h2 class="text-sm mb-4">Businessman</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card
-          *ngFor="let item of skillItems"
-          [item]="item"
-          mode="additional"
-        ></app-card>
-      </div>
+        <h2 class="text-sm mb-4">Student</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card
+            *ngFor="let item of skillItems"
+            [item]="item"
+            mode="additional"
+          ></app-card>
+        </div>
+        <h2 class="text-sm mb-4">Worker</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card
+            *ngFor="let item of skillItems"
+            [item]="item"
+            mode="additional"
+          ></app-card>
+        </div>
+        <h2 class="text-sm mb-4">Businessman</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card
+            *ngFor="let item of skillItems"
+            [item]="item"
+            mode="additional"
+          ></app-card>
+        </div>
       } @if (activeTab === 'Realty') {
-      <h2 class="text-sm mb-4">Estate</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card
-          *ngFor="let item of bodyItems; let i = index"
-          [item]="item"
-          mode="additional"
-          [isUnActive]="item.isUnActive"
-          [needMoreFriedns] = "(i === 1 || i === 2) ? true : false"
-          [circleProgress] = "(i === 0 || i === 1) ? 50 : 0"
-        ></app-card>
-      </div>
+        <h2 class="text-sm mb-4">Estate</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card
+            *ngFor="let item of bodyItems; let i = index"
+            [item]="item"
+            mode="additional"
+            [isUnActive]="item.isUnActive"
+            [needMoreFriedns] = "(i === 1 || i === 2) ? true : false"
+            [circleProgress] = "(i === 0 || i === 1) ? 50 : 0"
+          ></app-card>
+        </div>
 
-      <h2 class="text-sm mb-4">Profit</h2>
-      <div class="flex flex-col gap-2 mb-6">
-        <app-card
-          *ngFor="let item of skillItems"
-          mode="additional"
-          [item]="item"
-          [isUnActive]=true
-        ></app-card>
-      </div>
-      <h2 class="text-sm mb-4">Digital assets</h2>
-      <div class="flex flex-col gap-2">
-        <app-card
-          *ngFor="let item of skillItems"
-          mode="additional"
-          [item]="item"
-        ></app-card>
-      </div>
+        <h2 class="text-sm mb-4">Profit</h2>
+        <div class="flex flex-col gap-2 mb-6">
+          <app-card
+            *ngFor="let item of skillItems"
+            mode="additional"
+            [item]="item"
+            [isUnActive]=true
+          ></app-card>
+        </div>
+        <h2 class="text-sm mb-4">Digital assets</h2>
+        <div class="flex flex-col gap-2">
+          <app-card
+            *ngFor="let item of skillItems"
+            mode="additional"
+            [item]="item"
+          ></app-card>
+        </div>
       }
     </div>
   </section>
