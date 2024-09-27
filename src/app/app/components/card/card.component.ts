@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { CircleProgressComponent } from '../circle-progress/circle-progress.component';
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
@@ -8,15 +8,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CircleProgressComponent, NgIf, CommonModule],
   template: `
-    <div
-      class="relative text-[13px] bg-[#3F4248] rounded-xl flex items-center p-1 pl-0 relative h-[68px] border-main-theme border"
-    >
+    <div class="relative text-[13px] bg-[#3F4248] rounded-xl flex items-center p-1 pl-0 relative h-[68px] border-main-theme border">
       <div *ngIf="isUnActive" class="absolute bg-black inset-0 bg-opacity-20 rounded-xl z-50"></div>
       <app-circle-progress
-        *ngIf="circleProgress && !needMoreFriends"
+        *ngIf="showCircleProgress && !needMoreFriends"
         [progress]="circleProgress"
         class="absolute ml-[16px]"
-      >1m</app-circle-progress>
+      >{{circleProgressTime}}s</app-circle-progress>
       <img
         [src]="item.image"
         [alt]="item.title"
@@ -54,7 +52,7 @@ import { CommonModule } from '@angular/common';
     </div>
   `,
 })
-export class CardComponent {
+export class CardComponent implements OnInit{
   @Input() mode: 'base' | 'additional' = 'base';
   @Input({ required: true }) item!: {
     title: string;
@@ -63,7 +61,28 @@ export class CardComponent {
     income: number;
     balance: number;
   };
+  @Input() showCircleProgress: boolean = false;
   @Input() isUnActive: boolean = false;
   @Input() needMoreFriends: boolean = false;
   @Input() circleProgress: number = 0;
+  @Input() circleProgressTime: number = 0;
+
+  public ngOnInit() {
+    const initialCircleProgressTime = this.circleProgressTime;
+    const initialCircleProgress = this.circleProgress;
+
+    const timer = setInterval(()  => {
+      if (this.circleProgressTime > 0){
+        this.circleProgressTime--;
+        const timePercent = this.getTimePercent(initialCircleProgressTime);
+        this.circleProgress = (initialCircleProgress/100)*timePercent;
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000)
+  }
+
+  public getTimePercent(time: number): number {
+    return (this.circleProgressTime*100)/time;
+  }
 }
